@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 </head>
 <body>
-   
     <header class="header">
         <a href="#home" class="logo"> I'm
             <span>UniApplyBot</span>
@@ -296,61 +295,5 @@
             @ UniApplyBot | All Rights Reserved!
         </p>
     </footer>
-    <script>
-        document.getElementById('toggleBotButton').addEventListener('click', function() {
-            const botElement = document.querySelector('df-messenger');
-            if (botElement.style.display === 'none') {
-                botElement.style.display = 'block';
-                this.textContent = 'Close Bot';
-            } else {
-                botElement.style.display = 'none';
-                this.textContent = 'Open Bot';
-            }
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const sections = document.querySelectorAll('section');
-          const navLinks = document.querySelectorAll('.navbar a');
-      
-          const observerOptions = {
-            root: null, 
-            rootMargin: '0px',
-            threshold: 0.2 
-          };
-      
-          const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                console.log(entry.target.id);
-              if (entry.isIntersecting) {
-                const sectionID = entry.target.getAttribute('id');
-                navLinks.forEach(link => {
-                  link.classList.remove('active');
-                  if (link.getAttribute('href') === '#' + sectionID) {
-                    link.classList.add('active');
-                  }
-                });
-              }
-            });
-          }, observerOptions);
-      
-          sections.forEach(section => {
-            observer.observe(section);
-          });
-        });
-      </script>
-
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        const menuIcon = document.getElementById('menu-icon');
-        const mobileMenu = document.querySelector('.mobile-menu');
-    
-        menuIcon.addEventListener('click', function() {
-
-            mobileMenu.classList.toggle('show');
-        });
-    });</script>
-    <!-- <script src="script.js"></script> -->
 </body>
 </html>

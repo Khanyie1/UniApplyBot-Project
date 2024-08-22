@@ -1,24 +1,48 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const dfMessenger = document.querySelector('df-messenger');
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navbar a');
 
-    dfMessenger.addEventListener('df-messenger-loaded', function() {
-      const chatWindow = dfMessenger.shadowRoot.querySelector('df-messenger-chat');
+    const observerOptions = {
+      root: null, 
+      rootMargin: '0px',
+      threshold: 0.2 
+    };
 
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.attributeName === 'aria-hidden') {
-            const isHidden = chatWindow.getAttribute('aria-hidden') === 'true';
-            if (isHidden) {
-              // Chat window is closed, clear chat history
-              const messageList = chatWindow.shadowRoot.querySelector('.df-messenger-message-list');
-              if (messageList) {
-                messageList.innerHTML = '';
-              }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          console.log(entry.target.id);
+        if (entry.isIntersecting) {
+          const sectionID = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + sectionID) {
+              link.classList.add('active');
             }
-          }
-        });
+          });
+        }
       });
+    }, observerOptions);
 
-      observer.observe(chatWindow, { attributes: true });
+    sections.forEach(section => {
+      observer.observe(section);
     });
-  });
+
+    document.getElementById('toggleBotButton').addEventListener('click', function() {
+      const botElement = document.querySelector('df-messenger');
+      if (botElement.style.display === 'none') {
+          botElement.style.display = 'block';
+          this.textContent = 'Close Bot';
+      } else {
+          botElement.style.display = 'none';
+          this.textContent = 'Open Bot';
+      }
+    });
+
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    menuIcon.addEventListener('click', function() {
+
+        mobileMenu.classList.toggle('show');
+    });
+});

@@ -22,19 +22,9 @@ df-messenger {
     --df-messenger-chat-background-color: #fafafa;
     --df-messenger-font-color: black;
     --df-messenger-send-icon: #878fac;
-    /* position: fixed; */
     bottom: 20px;
     right: 20px;
 }
-
-/* df-messenger {
-    --df-messenger-bot-message: #878fac;
-    --df-messenger-button-titlebar-color: #df9b56;
-    --df-messenger-chat-background-color: #fafafa;
-    --df-messenger-font-color: white;
-    --df-messenger-send-icon: #878fac;
-    --df-messenger-user-message: #479b3d;
-} */
 
 html {
     font-size: 60%;
@@ -51,7 +41,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding top: 15px;
+    padding-top: 15px;
     padding-bottom: 15px;
     padding: 20px 100px;
     background: rgba(0, 0, 0, 0.3);
@@ -218,7 +208,6 @@ span {
     text-align: center; 
 }
 
-
 .btn-group .btn:hover,
 .btn-group .bot:hover {
     box-shadow: 0 0 25px var(--main-color); 
@@ -227,13 +216,11 @@ span {
     transform: scale(1.05);
 }
 
-
 .btn-group {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
-
 
 .sendmessage-btn:hover {
     box-shadow: 0 0 25px var(--main-color);
@@ -260,8 +247,6 @@ span {
 }
 
 .sendmessage-btn 
-
-
 .text-animation {
     font-size: 34px;
     font-weight: 600;
@@ -277,7 +262,6 @@ span {
     color: var(--main-color);
     animation: words 10s infinite;
 }
-
 
 @keyframes words{
     0%,
@@ -757,8 +741,6 @@ span {
         width: 100%;
     }
 
-    
-
     .timeline-items::before {
         left: 7px;
     }
@@ -857,13 +839,11 @@ span {
 
 @media(max-width:895px) {
     .home {
-
         padding-top: 35px;
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 0px;
     }
-
 
     .home-content {
         padding-bottom: 35px;
@@ -989,7 +969,6 @@ span {
         border: 5px solid var(--main-color);
         transform: scale(1.05);
     }
-
     .header,
     .home,
     .education,
@@ -1013,19 +992,12 @@ span {
     }
 }
 
-
-
-
-
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
 }
-
-
 
 .mobile-menu {
     display: none;
@@ -1040,7 +1012,6 @@ span {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
 .mobile-menu a {
     font-size: 1.6rem;
     color: var(--text-color);
@@ -1051,7 +1022,6 @@ span {
 .mobile-menu a:hover {
     color: var(--main-color);
 }
-
 
 @media only screen and (min-width: 344px) and (max-width: 550px) {
     .header .navbar {
@@ -1066,6 +1036,7 @@ span {
         display: flex; 
     }
 
+<<<<<<< HEAD
     .service-box {
         transition: 0.4s ease-in-out;
         background-color: var(--main-color);
@@ -1079,6 +1050,8 @@ span {
 
 
 
+=======
+>>>>>>> upstream/Refined-SFC
     .timeline-items::before {
         left: 7px;
     }
@@ -1108,7 +1081,6 @@ span {
         padding-bottom: 0px;
     }
 
-
     .home-content {
         padding-bottom: 35px;
-}
+}}
