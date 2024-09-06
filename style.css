@@ -531,6 +531,46 @@ span {
     font-size: 2rem;
 }
 
+
+
+.login {
+    background-color: var(--bg-color); 
+}
+
+.login h2 {
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.login form {
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.login .input-box {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.login .input-box input,
+.login textarea {
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 1.5rem 0;
+    resize: none;
+}
+
+.login .btn {
+    margin-top: 2rem;
+}
+
+
+
 .contact {
     background-color: var(--bg-color);
 }
