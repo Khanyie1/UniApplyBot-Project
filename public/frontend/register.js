@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 import { auth, db } from './firebaseAPI.js';
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+import { validateEmail, validateUsername } from '../frontend/validation/validation.js';
 
 function showMessage(message, divId) {
     var messageDiv = document.getElementById(divId);
@@ -37,8 +38,33 @@ function showMessage(message, divId) {
     }, 5000)
 }
 
-const registerBtn = document.getElementById('register');
+// const passwordInput = document.getElementById('password');
+// const tooltip = document.getElementById('passwordTooltip');
 
+// passwordInput.addEventListener('input', (e) => {
+//     const password = e.target.value;
+//     const { isStrong, criteria } = checkPasswordStrength(password);
+
+//     let feedback = "Password must contain: <ul>";
+//     if (!criteria.length) feedback += "<li>At least 8 characters</li>";
+//     if (!criteria.upperCase) feedback += "<li>At least one uppercase letter</li>";
+//     if (!criteria.lowerCase) feedback += "<li>At least one lowercase letter</li>";
+//     if (!criteria.number) feedback += "<li>At least one number</li>";
+//     if (!criteria.specialChar) feedback += "<li>At least one special character</li>";
+//     feedback += "</ul>";
+
+//     if (isStrong) {
+//         feedback = "Your password is strong!";
+//     }
+
+//     if (tooltip) {
+//         tooltip.innerHTML = feedback;
+//     } else {
+//         console.error("Tooltip element not found");
+//     }
+// });
+
+const registerBtn = document.getElementById('register');
 
 registerBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -46,6 +72,43 @@ registerBtn.addEventListener('click', (e) => {
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    // const password = passwordInput.value;
+
+    if (!username) {
+        showMessage("Username is required*", "RegMessage");
+        return;
+    }
+
+    if(!validateUsername(username)) {
+        showMessage("Username must be at least 4 characters long*", "RegMessage");
+        return;
+    }
+
+    if(!email) {
+        showMessage("Email is required*", "RegMessage");
+        return;
+    }
+
+    if(!validateEmail(email)) {
+        showMessage("Please enter a valid email address*", "RegMessage");
+        return;
+    }
+
+    if (!password) {
+        showMessage("Password is required*", "RegMessage");
+        return;
+    }
+
+    if(password.length < 6){
+        showMessage("Password must be at least 6 characters long", "RegMessage");
+        return;
+    }
+
+    // const { isStrong } = checkPasswordStrength(password);
+    // if(!isStrong){
+    //     showMessage("Password is too weak. Please strengthen your password*", "RegMessage");
+    //     return;
+    // }
 
     try{
         createUserWithEmailAndPassword(auth, email, password)
@@ -60,13 +123,12 @@ registerBtn.addEventListener('click', (e) => {
             showMessage("Account created successfully", "RegMessage");
 
             const docRef = doc(db, "users", user.uid);
-
             setDoc(docRef, userData)
             .then(() => {
                 window.location.href = "./login.html"
             })
             .catch((error) => {
-                console.error("Have problem with creating the account", error)
+                console.error("Problem creating the account", error)
             })
         })
         .catch((error) => {

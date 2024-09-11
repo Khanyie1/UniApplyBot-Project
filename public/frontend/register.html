@@ -15,7 +15,7 @@
     </header>
 
     <section class="home-login">
-        <div id="RegMessage" class="message" style="display:none;"></div>
+        <div id="RegMessage" class="message" style="display:none; text-align: center;"></div>
         <div class="wrapper">
             <div class="form-box register">
                 <h2>Registration</h2>
@@ -36,7 +36,21 @@
                         <span class="icon"><i class="fa-solid fa-lock"></i></span>
                         <input type="password" id="password" required>
                         <span class="eye" style="color: #7a797e"><i class="fa-solid fa-eye" id="eye2"></i></span>
-                        <label>Password</label>
+                        <label>Password
+                            <span class="tooltip-container">
+                                <i class="fa-solid fa-question-circle tooltip-icon"></i>
+                                <span id="passwordTooltip" class="tooltip-text">
+                                    Password must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character.
+                                </span>
+                            </span>
+                        </label>
+
+                        <!-- <span class="tooltip-container">
+                            <i class="fa-solid fa-question-circle tooltip-icon"></i>
+                            <span id="passwordTooltip" class="tooltip-text">
+                                Password must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character.
+                            </span>
+                        </span> -->
                     </div>
 
                     <div class="remember-forget2">

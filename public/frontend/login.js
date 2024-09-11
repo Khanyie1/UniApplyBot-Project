@@ -1,19 +1,3 @@
-// Toggling the visibility of the password
-const eye = document.getElementById('eye');
-let state = false;
-
-function toggle() {
-    const passwordField = document.getElementById('password');
-    
-    if (state) {
-        passwordField.setAttribute('type', 'password');
-        eye.style.color = '#7a797e';
-        state = false;
-    } else {
-        passwordField.setAttribute('type', 'text');
-        eye.style.color = '#FFFFFF';
-        state = true;
-
 document.addEventListener('DOMContentLoaded', () => {
     // Toggling the visibility of the password
     const eyeBtn = document.getElementById('eye');
@@ -38,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 import { auth } from './firebaseAPI.js';
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+import { validateEmail } from '../frontend/validation/validation.js';
 
 function showMessage(message, divId) {
     var messageDiv = document.getElementById(divId);
@@ -53,11 +38,47 @@ function showMessage(message, divId) {
 
 const loginBtn = document.getElementById("login");
 
-loginBtn.addEventListener('click', (e) => {
+loginBtn.addEventListener('click', async (e) => {
     e.preventDefault();
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+
+    if(email === ""){
+        showMessage("Email is required*", "SignInMessage");
+        return;
+    }
+
+    if(!validateEmail(email)) {
+        showMessage("Please enter a valid email address", "SignInMessage");
+        return;
+    }
+
+    // const emailExists = await checkEmailExists(email);
+    // if(!emailExists) {
+    //     showMessage("Email does not exist in our system!", "SignInMessage")
+    // } else {
+    //     showMessage("Email does exist already!", "SignInMessage");
+    // }
+
+    // const emailValue = email;
+    // checkEmailExists(emailValue).then(result => {
+    // if (result.exists) {
+    //     console.log(result.message);
+    // } else {
+    //     console.log(result.message);
+    // }
+    // });
+
+    if(password === ""){
+        showMessage("Password is required*", "SignInMessage");
+        return;
+    }
+
+    // if(password.length < 6){
+    //     showMessage("Password must be at least 6 characters long", "SignInMessage");
+    //     return;
+    // }
 
     try{
         signInWithEmailAndPassword(auth, email, password)
@@ -73,8 +94,9 @@ loginBtn.addEventListener('click', (e) => {
             if(errorCode === "auth/invalid-credentails")
             {
                 showMessage("Invalid Email or Password",  "SignInMessage");
-            } else {
-                showMessage("Account does not Exist!", "SignInMessage");
+            } 
+            else {
+                showMessage("Invalid Email or Password", "SignInMessage");
             }
         })
     } catch {
