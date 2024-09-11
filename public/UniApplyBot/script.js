@@ -46,3 +46,41 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.classList.toggle('show');
     });
 });
+
+
+import { auth } from '../frontend/firebaseAPI.js';
+import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+
+try {
+  const logoutBtn = document.getElementById('logout');
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage['loggedInUserId'] = '';
+  
+    signOut(auth)
+    .then(() => {
+      window.location.href = "../frontend/login.html"
+    })
+    .catch((error) => {
+      console.error("Error signing out", error)
+    })
+  })
+} catch {
+  console.log("Failed to log out.")
+}
+
+try {
+  const logout2 = document.getElementById("logout2");
+
+  logout2.addEventListener("click", () => {
+    signOut(auth)
+    .then(() => {
+      window.location.href = "../frontend/login.html"
+    })
+    .catch((error) => {
+      console.error("Error signing out", error)
+    })
+  })
+} catch {
+  console.log("Failed to log out.")
+}

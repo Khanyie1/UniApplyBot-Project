@@ -5,14 +5,18 @@
         <title>Forgot Password</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/6d06f9f594.js" crossorigin="anonymous"></script>
+        <script type="module" src="./forgot.js" defer></script>
+        <script type="module" src="./firebaseAPI.js" defer></script>
     </head>
     <body class="home">
         <header class="login-header">
-            <img src="">
+            <img src="./image/logo.webp" class="logo">
         </header>
         
+        <div id="ForgotMessage" class="message" style="display:none;"></div>
+        
         <section class="home-forgot">
-            
             <div class="wrapper">
                 <div class="form-box login">
                     <h2>Forgot Password</h2>
@@ -34,7 +38,6 @@
             </div>
         </section>
             
-        <script src="https://kit.fontawesome.com/6d06f9f594.js" crossorigin="anonymous"></script>
-        <script src="script.js" defer></script>
+        <!-- <script src="script.js" defer></script> -->
     </body>
 </html>

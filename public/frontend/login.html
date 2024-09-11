@@ -6,7 +6,8 @@
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-    <script src="login.js" defer></script>
+    <script type="module" src="./firebaseAPI.js" defer></script>
+    <script type="module" src="./login.js" defer></script>
     <script src="https://kit.fontawesome.com/6d06f9f594.js" crossorigin="anonymous"></script>
 </head>
 <body class="home">
@@ -15,6 +16,7 @@
     </header>
 
     <section class="home-login">
+        <div id="SignInMessage" class="message" style="display:none;"></div> 
         <div class="wrapper">
             <div class="form-box login">
                 <h2>Login</h2>
@@ -27,7 +29,7 @@
                     <div class="input-box2">
                         <span class="icon"><i class="fa-solid fa-lock"></i></span>
                         <input type="password" id="password" required>
-                        <span class="eye" style="color: #7a797e"><i class="fa-solid fa-eye" id="eye" onclick="toggle()"></i></span>
+                        <span class="eye" style="color: #7a797e"><i class="fa-solid fa-eye" id="eye"></i></span>
                         <label>Password</label>
                     </div>
                     <div class="remember-forget">

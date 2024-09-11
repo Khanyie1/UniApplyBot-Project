@@ -68,6 +68,20 @@ body {
     text-shadow: 0 0 25px var(--main-color);
 }
 
+.navbar button {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar button:hover {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);   
+}
+
 .navbar a {
     font-size: 1.8rem;
     color: var(--text-color);
