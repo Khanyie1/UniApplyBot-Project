@@ -239,6 +239,48 @@ span {
     gap: 1.5rem;
 }
 
+
+.styled-select {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    box-shadow: 0 0 25px transparent;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+}
+
+.styled-select:hover {
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
+    transform: scale(1.05);
+}
+
+.styled-select option {
+    background-color: black;
+    color: var(--main-color);
+}
+
+.language-label {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    margin-bottom: 1rem; 
+    display: block; 
+    text-align: center; 
+    color: var(--main-color);
+}
+
 .sendmessage-btn:hover {
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
@@ -294,23 +336,23 @@ span {
 @keyframes words{
     0%,
     20% {
-        content: "Frontend Designer";
+        content: "application links.";
     }
     21%,
     40% {
-        content: "Web Designer";
+        content: "prospectuses.";
     }
     41%,
     60% {
-        content: "UI /UX Designer";
+        content: "faculty access.";
     }
     61%,
     80% {
-        content: "Web Developer";
+        content: "institution info.";
     }
     81%,
     100% {
-        content: "Software Tester";
+        content: "easy-to-understand guidance.";
     }
 }
 

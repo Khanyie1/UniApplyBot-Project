@@ -43,10 +43,10 @@
             <h1>Hi, it's <span>UniApplyBot</span></h1>
             <h3 class="text-animation"> I'm here to help with <span></span></h3>
             <p>
-                UniApplyBot is your personal assistant designed to streamline university applications. Whether you're
-                searching for the right course, seeking advice on requirements, or tracking your application progress,
-                UniApplyBot is here to provide you with real-time support and guidance.
-
+                Meet UniApplyBot, your personal guide to simplifying university applications! Whether you're searching
+                for the perfect course, browsing prospectuses, or seeking real-time support, UniApplyBot has you
+                covered. Ready to kickstart your university journey with expert guidance? Open the chat now and let
+                UniApplyBot assist you!
             </p>
 
             <div class="social-icons">
@@ -68,19 +68,17 @@
         </div>
 
         <div>
-            <label for="languageSelect">Choose Language: </label>
-            <select id="languageSelect" onchange="setLanguage()">
+            <label for="languageSelect" class="language-label">Choose Language: </label>
+            <select id="languageSelect" class="styled-select" onchange="setLanguage()">
                 <option value="en">English</option>
                 <option value="zu">Zulu</option>
             </select>
         </div>
-    
+        
+
         <!-- Chatbot container -->
         <div id="chatbot-container">
-            <df-messenger
-                chat-title="UniApplyBot"
-                agent-id="0f82854e-dc09-4500-aba1-3cd3b951fdae"
-                language-code="en">
+            <df-messenger chat-title="UniApplyBot" agent-id="0f82854e-dc09-4500-aba1-3cd3b951fdae" language-code="en">
             </df-messenger>
         </div>
 
@@ -88,17 +86,17 @@
             function setLanguage() {
                 const language = document.getElementById('languageSelect').value;
                 const chatbotContainer = document.getElementById('chatbot-container');
-                
+
                 const existingMessenger = chatbotContainer.querySelector('df-messenger');
                 if (existingMessenger) {
                     chatbotContainer.removeChild(existingMessenger);
                 }
-    
+
                 const dfMessenger = document.createElement('df-messenger');
                 dfMessenger.setAttribute('chat-title', 'UniApplyBot');
                 dfMessenger.setAttribute('agent-id', language === 'en' ? '0f82854e-dc09-4500-aba1-3cd3b951fdae' : '0a44566d-bfa6-4c72-844a-aba2c7132065');
                 dfMessenger.setAttribute('language-code', language);
-    
+
                 chatbotContainer.appendChild(dfMessenger);
             }
         </script>
@@ -173,28 +171,29 @@
         <div class="services-container">
             <div class="service-box">
                 <div class="service-info"></div>
-                <h4>Reducing Complexity in the Application Process</h4>
+                <h4>Reduced Complexity</h4>
                 <p>
                     The university application process can be daunting due to its complexity. UniApplyBot streamlines
-                    this experience by consolidating all relevant information in one place. It guides users through the
-                    process, reducing the confusion of navigating multiple platforms and forms.
+                    this experience by consolidating all relevant information in one place. It directs users to the
+                    relavant links, provides detailed information, and simplifies the process. Therefore, reducing the
+                    confusion of navigating multiple platforms and forms.
                 </p>
             </div>
 
             <div class="service-box">
                 <div class="service-info"></div>
-                <h4>Addressing Time Constraints</h4>
+                <h4>Time-Saving Solution</h4>
                 <p>
                     Many students face time constraints when trying to gather information from different sources.
-                    UniApplyBot saves time by providing immediate answers to questions, from application deadlines to
-                    admission requirements, allowing users to focus more on their studies and less on information
-                    searches.
+                    UniApplyBot saves time by providing immediate answers to questions, from providing information on
+                    institutions to providing prospectuses, allowing users to focus more on their studies and less on
+                    information searches.
                 </p>
             </div>
 
             <div class="service-box">
                 <div class="service-info"></div>
-                <h4>Breaking Language Barriers</h4>
+                <h4>Language Support</h4>
                 <p>
                     Accessing university application information can be challenging, especially when faced with
                     unfamiliar terminology or complex language. UniApplyBot simplifies this by providing clear,
@@ -206,11 +205,12 @@
 
             <div class="service-box">
                 <div class="service-info"></div>
-                <h4>Knowing the Steps to Apply</h4>
+                <h4>Streamlined University Access</h4>
                 <p>
-                    Understanding the steps required to apply to universities can often be overwhelming. UniApplyBot
-                    demystifies the process by outlining each step, from gathering necessary documents to submitting
-                    applications, making sure students are well-prepared every step of the way.
+                    Navigating university websites can be overwhelming. UniApplyBot simplifies the process by offering
+                    quick and easy access to everything you need, from university information to course prospectuses and
+                    faculty details. Stay informed and prepared with all the necessary information right at your
+                    fingertips. 
                 </p>
             </div>
         </div>
