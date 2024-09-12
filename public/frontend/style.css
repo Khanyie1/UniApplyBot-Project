@@ -360,9 +360,44 @@ header {
     font-size: 1rem;
     opacity: 0;
     animation: fadeOut 7s forwards;
-}z
+}
 
-.tooltip-container {
+span.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+i.fa-solid.fa-question-circle.tooltip-icon {
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+span#passwordTooltip {
+    visibility: hidden;
+    width: 200px; /* Increase the width for more content */
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: left;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Adjusted distance above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: pre-wrap;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-container:hover #passwordTooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* .tooltip-container {
     position: relative;
     display: inline-block;
 }
@@ -395,7 +430,7 @@ header {
 .tooltip-container:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
-}
+} */
 
 @media (max-width: 600px) {
     .tooltip-text {
@@ -407,45 +442,3 @@ header {
         display: none;
     }
 }
-
-/* .tooltip-container {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip-icon {
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 5px;
-}
-
-.tooltip-text {
-    visibility: hidden;
-    width: 100px;
-    background-color: #f9f9f9;
-    color: #333;
-    text-align: left;
-    border-radius: 5px;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-    white-space: pre-wrap;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-}
-
-.tooltip-container:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-@media (max-width: 600px) {
-    .tooltip-text {
-        width: 150px;
-        margin-left: -75px;
-    }
-} */

@@ -38,32 +38,6 @@ function showMessage(message, divId) {
     }, 4000)
 }
 
-// const passwordInput = document.getElementById('password');
-// const tooltip = document.getElementById('passwordTooltip');
-
-// passwordInput.addEventListener('input', (e) => {
-//     const password = e.target.value;
-//     const { isStrong, criteria } = checkPasswordStrength(password);
-
-//     let feedback = "Password must contain: <ul>";
-//     if (!criteria.length) feedback += "<li>At least 8 characters</li>";
-//     if (!criteria.upperCase) feedback += "<li>At least one uppercase letter</li>";
-//     if (!criteria.lowerCase) feedback += "<li>At least one lowercase letter</li>";
-//     if (!criteria.number) feedback += "<li>At least one number</li>";
-//     if (!criteria.specialChar) feedback += "<li>At least one special character</li>";
-//     feedback += "</ul>";
-
-//     if (isStrong) {
-//         feedback = "Your password is strong!";
-//     }
-
-//     if (tooltip) {
-//         tooltip.innerHTML = feedback;
-//     } else {
-//         console.error("Tooltip element not found");
-//     }
-// });
-
 const registerBtn = document.getElementById('register');
 
 registerBtn.addEventListener('click', (e) => {
@@ -72,7 +46,6 @@ registerBtn.addEventListener('click', (e) => {
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    // const password = passwordInput.value;
 
     if (!username) {
         showMessage("Username is required.", "RegMessage");
@@ -103,12 +76,6 @@ registerBtn.addEventListener('click', (e) => {
         showMessage("Password must be at least 6 characters long.", "RegMessage");
         return;
     }
-
-    // const { isStrong } = checkPasswordStrength(password);
-    // if(!isStrong){
-    //     showMessage("Password is too weak. Please strengthen your password*", "RegMessage");
-    //     return;
-    // }
 
     try{
         createUserWithEmailAndPassword(auth, email, password)
