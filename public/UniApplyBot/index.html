@@ -40,6 +40,7 @@
 
     <section class="home" id="home">
         <div class="home-content">
+            
             <h1>Hi, it's <span>UniApplyBot</span></h1>
             <h3 class="text-animation"> I'm here to help with <span></span></h3>
             <p>
@@ -277,29 +278,41 @@
             </div>
         </div>
     </section>
+    <!-- this follows my forms -->
+   
+    
+    
+    <!-- this conclude it -->
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Us</span></h2>
-
-        <form action="">
+    
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="96dd6c5d-cfe2-4abc-a0d9-58c9e2f3a55f"> <!-- Your Web3Forms access key -->
+    
+            <!-- Remove the redirect if not necessary -->
+            <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you"> -->
+    
             <div class="input-group">
                 <div class="input-box">
                     <input type="text" name="username" id="username" placeholder="Full Name" required>
                     <input type="email" name="UserEmail" id="UserEmail" placeholder="Email" required>
                 </div>
-
+    
                 <div class="input-box">
-                    <input type="number" name="UseNumber" id="UseeNumber" placeholder="Phone Number" required>
+                    <input type="number" name="UseNumber" id="UseNumber" placeholder="Phone Number" required>
                     <input type="text" name="subject" id="subject" placeholder="Subject">
                 </div>
             </div>
-
+    
             <div class="input-group-2">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <button type="submit" class="sendmessage-btn">Send Message</button>
             </div>
         </form>
     </section>
+    
+    
 
     <footer class="footer">
         <div class="social">
