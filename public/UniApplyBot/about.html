@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script type="module" src="script.js" defer></script>
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* About Us Section */
+    .about-section {
+      padding: 60px;
+      text-align: center;
+      background-color: #827c7cc6;
+      color: white;
+    }
+
+    .about-section h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 1.2em;
+    }
+
+    /* Team Section */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .column {
+      flex: 1;
+      max-width: 300px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      /* Circular image */
+      margin: 0 auto 20px;
+    }
+
+    .container h2 {
+      font-size: 1.8em;
+      margin: 10px 0;
+    }
+
+    .title {
+      font-size: 1.2em;
+      color: #00cccc;
+      /* A dimmed color */
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      color: white;
+      background-color: #00ffee;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #00cccc;
+    }
+
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    .social {
+      margin-bottom: 10px;
+    }
+
+    .social a {
+      color: #00ffee;
+      margin: 0 10px;
+      font-size: 1.5em;
+      transition: color 0.3s;
+    }
+
+    .social a:hover {
+      color: #00cccc;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 650px) {
+      .column {
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span>UniApplyBot</span>
+    </a>
+  </header>
+
+  <div class="about-section">
+    <h1 style="padding-top:3rem;">About Us</h1>
+    <p style="text-align: center;">At UniApplyBot, we are dedicated to breaking down barriers in higher education by
+      providing an inclusive, supportive, and easy-to-use application assistant for all South African students. Our goal
+      is to empower students to take control of their future, regardless of their background or circumstances. Learn
+      more about our team below.</p>
+  </div>
+
+  <h2 style="text-align:center; margin-top: 40px; color: white;">Our Team</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="images/image35.jpeg" alt="Prince">
+        <div class="container">
+          <h2>Prince</h2>
+          <p class="title">CEO & Founder</p>
+          <p>Leading with passion and commitment.</p>
+          <p>jane@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="images/image35.jpeg" alt="Khanyisani">
+        <div class="container">
+          <h2>Khanyisani</h2>
+          <p class="title">Art Director</p>
+          <p>Bringing creativity to life.</p>
+          <p>mike@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="images/image35.jpeg" alt="Basil">
+        <div class="container">
+          <h2>Basil</h2>
+          <p class="title">Art Director</p>
+          <p>Designing with a purpose.</p>
+          <p>mike@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="images/image35.jpeg" alt="Ofentse">
+        <div class="container">
+          <h2>Ofentse</h2>
+          <p class="title">Designer</p>
+          <p>Crafting visuals that speak volumes.</p>
+          <p>fentselebese@gmail.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="social">
+      <a href="#"><i class='bx bxl-linkedin'></i></a>
+      <a href="#"><i class='bx bxl-github'></i></a>
+      <a href="#"><i class='bx bxl-whatsapp'></i></a>
+      <a href="#"><i class='bx bxl-tiktok'></i></a>
+    </div>
+    <p class="copyright">
+      &copy; UniApplyBot | All Rights Reserved!
+    </p>
+  </footer>
+</body>
+
+</html>
