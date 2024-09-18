@@ -1086,6 +1086,7 @@ span {
     .header,
     .home,
     .education,
+    .financial-aid
     .services,
     .testmonials,
     .contact,
@@ -1187,77 +1188,46 @@ span {
         padding-bottom: 35px;
 }}
 
-/* contact us form*/
-.contact-section {
-    width: 100%;
-    max-width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3rem 1rem;
-  }
-  
-  .contact-intro > * + * {
-    margin-top: 1rem;
-  }
-  
-  .contact-title {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-  }
-  
-  .contact-description {
-    color: rgb(107 114 128);
-  }
-  
-  .form-group-container {
+/* financial aid*/
+
+.financial-container{
     display: grid;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-label {
-    margin-bottom: 0.5rem;
-  }
-  
-  .form-input,
-  .form-textarea {
-    padding: 0.5rem;
-    border: 1px solid #e5e7eb;
-    display: flex;
-    height: 2.5rem;
-    width: 100%;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-  
-  .form-input::placeholder,
-  .form-textarea:focus-visible {
-    color: #6b7280;
-  }
-  
-  .form-input:focus-visible,
-  .form-textarea:focus-visible {
-    outline: 2px solid #2563eb;
-    outline-offset: 2px;
-  }
-  
-  .form-textarea {
-    min-height: 120px;
-  }
-  
-  .form-submit {
-    width: 100%;
-    margin-top: 1.2rem;
-    background-color: #3124ca;
-    color: #fff;
-    padding: 13px 5px;
-    border-radius: 0.375rem;
-  }
-/* above is for the form   */
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.financial-stream:hover {
+    background: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.05);
+}
+.financial-stream{
+    background-color: var(--main-color);
+    height: 200px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    padding: 3em 3em;
+}
+.financial-stream p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    line-height: 1.4;
+    margin: auto;
+}
+
+
+
+.financial-stream h4 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 2;
+}
+
+/* finacial aid */
+
+
