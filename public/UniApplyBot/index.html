@@ -7,6 +7,7 @@
     <title>UniApplyBot</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <script type="module" src="script.js" defer></script>
 </head>
@@ -30,12 +31,12 @@
 
     <!-- Mobile menu for small screens -->
     <nav class="mobile-menu">
-        <a href="#home" class="active">Home</a>
-        <a href="#education">Education</a>
-        <a href="#services">Services</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact Us</a>
-        <button id="logout2" class="logoutTwo">Log Out</button>
+        <a href="#home" class="active"><i class="material-icons">home</i>Home</a>
+        <a href="#education"><i class="material-icons">school</i>Education</a>
+        <a href="#services"><i class="material-icons">volunteer_activism</i>Services</a>
+        <a href="#testimonials"><i class="material-icons">reviews</i>Testimonials</a>
+        <a href="#contact"><i class="material-icons">contacts</i>Contact Us</a>
+        <button id="logout2" class="logoutTwo"><i class="material-icons">logout</i>Log Out</button>
     </nav>
 
     <section class="home" id="home">
@@ -65,7 +66,7 @@
         </div>
 
         <div class="home-img">
-            <img src="images/IMG-20220921-WA0008.jpg" alt="code snippet">
+            <img src="images/logo.webp" alt="code snippet">
         </div>
 
         <div>
@@ -322,17 +323,52 @@
             <a href="#"><i class='bx bxl-tiktok'></i></a>
         </div>
 
-        <ul class="list">
+        <ul>
             <li>
-                <a href="#">FAQ</a>
+                <a id="myBtn">FAQ</a>
             </li>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Frequently Asked Questions</h2>
+                    </div>
+                    <div class="modal-body" style="color: black">
+                        <button class="collapsible">1. Is UniApplyBot free to use?</button>
+                        <div class="content">
+                            <p>Yes, UniApplyBot is completely free for students. We aim to provide accessible solutions
+                                to ease the university application process.</p>
+                        </div>
+                        <button class="collapsible">2. How do I know my data is safe?</button>
+                        <div class="content">
+                            <p>We use advanced security measures to ensure your data is protected. Your personal
+                                information is stored securely and used only for the purpose of assisting with your
+                                university applications.</p>
+                        </div>
+                        <button class="collapsible">3. Can UniApplyBot help me with international applications?</button>
+                        <div class="content">
+                            <p>Currently, UniApplyBot focuses on South African universities, but we are working on
+                                expanding our services to include international institutions in the near future.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <h5>@ UniApplyBot | All Rights Reserved!</h5>
+                    </div>
+                </div>
+
+            </div>
+
 
             <li>
                 <a href="#services">Services</a>
             </li>
 
             <li>
-                <a href="#">About Us</a>
+                <a href="about.html">About Us</a>
             </li>
 
             <li>
