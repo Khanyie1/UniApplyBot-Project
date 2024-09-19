@@ -279,21 +279,11 @@
             </div>
         </div>
     </section>
-    <!-- this follows my forms -->
-   
-    
-    
-    <!-- this conclude it -->
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Us</span></h2>
-    
         <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="96dd6c5d-cfe2-4abc-a0d9-58c9e2f3a55f"> <!-- Your Web3Forms access key -->
-    
-            <!-- Remove the redirect if not necessary -->
-            <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you"> -->
-    
+            <input type="hidden" name="access_key" value="96dd6c5d-cfe2-4abc-a0d9-58c9e2f3a55f">
             <div class="input-group">
                 <div class="input-box">
                     <input type="text" name="username" id="username" placeholder="Full Name" required>
@@ -302,7 +292,7 @@
     
                 <div class="input-box">
                     <input type="number" name="UseNumber" id="UseNumber" placeholder="Phone Number" required>
-                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
                 </div>
             </div>
     
@@ -313,8 +303,6 @@
         </form>
     </section>
     
-    
-
     <footer class="footer">
         <div class="social">
             <a href="#"><i class='bx bxl-linkedin'></i></a>
@@ -327,41 +315,42 @@
             <li>
                 <a id="myBtn">FAQ</a>
             </li>
-
             <!-- The Modal -->
             <div id="myModal" class="modal">
-
                 <!-- Modal content -->
                 <div class="modal-content">
                     <div class="modal-header">
                         <span class="close">&times;</span>
                         <h2>Frequently Asked Questions</h2>
                     </div>
+
                     <div class="modal-body" style="color: black">
                         <button class="collapsible">1. Is UniApplyBot free to use?</button>
                         <div class="content">
                             <p>Yes, UniApplyBot is completely free for students. We aim to provide accessible solutions
                                 to ease the university application process.</p>
                         </div>
+
                         <button class="collapsible">2. How do I know my data is safe?</button>
                         <div class="content">
                             <p>We use advanced security measures to ensure your data is protected. Your personal
                                 information is stored securely and used only for the purpose of assisting with your
                                 university applications.</p>
                         </div>
+
                         <button class="collapsible">3. Can UniApplyBot help me with international applications?</button>
                         <div class="content">
                             <p>Currently, UniApplyBot focuses on South African universities, but we are working on
                                 expanding our services to include international institutions in the near future.</p>
                         </div>
                     </div>
+
                     <div class="modal-footer">
                         <h5>@ UniApplyBot | All Rights Reserved!</h5>
                     </div>
                 </div>
 
             </div>
-
 
             <li>
                 <a href="#services">Services</a>
@@ -384,5 +373,4 @@
         </p>
     </footer>
 </body>
-
 </html>
