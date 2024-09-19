@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +21,7 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#education">Education</a>
+            <a href="#Financial">Financial-aid</a>
             <a href="#services">Services</a>
             <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact Us</a>
@@ -37,6 +37,13 @@
         <a href="#testimonials"><i class="material-icons">reviews</i>Testimonials</a>
         <a href="#contact"><i class="material-icons">contacts</i>Contact Us</a>
         <button id="logout2" class="logoutTwo"><i class="material-icons">logout</i>Log Out</button>
+        <a href="#home" class="active">Home</a>
+        <a href="#education">Education</a>
+        <a href="#Financial">Financial-aid</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact Us</a>
+        <button id="logout2" class="logoutTwo">Log Out</button>
     </nav>
 
     <section class="home" id="home">
@@ -76,8 +83,6 @@
                 <option value="zu">Zulu</option>
             </select>
         </div>
-        
-
         <!-- Chatbot container -->
         <div id="chatbot-container">
             <df-messenger chat-title="UniApplyBot" agent-id="0f82854e-dc09-4500-aba1-3cd3b951fdae" language-code="en">
@@ -106,7 +111,6 @@
 
     <section id="education" class="education">
         <h2 class="heading">Education</h2>
-
         <div class="timeline-items">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
@@ -165,11 +169,52 @@
             </div>
         </div>
     </section>
-
-
+    <!-- financial-aid part -->
+    <section id="Financial" class="services">
+        <h2 class="heading">Financial Aid Assistance</h2>
+    
+        <div class="financial-container">
+            <div class="financial-stream">
+                <div class="financial-info"></div>
+                <h4>NSFAS</h4>
+                <p>National Student Financial Aid Scheme For South African students seeking financial aid, NSFAS provides extensive support for eligible students.</p>
+                <a href="https://www.nsfas.org.za/"> <h3>Learn more</h3></a>
+            </div>
+    
+            <div class="financial-stream">
+                <div class="financial-info"></div>
+                <h4>Wits University Financial Aid</h4>
+                <p>The University of the Witwatersrand offers financial assistance to students who meet the university’s financial aid criteria.</p>
+                <a href="https://www.wits.ac.za/study-at-wits/fees-and-funding/financial-aid/"><h3>Learn More</h3></a>
+            </div>
+    
+            <div class="financial-stream">
+                <div class="financial-info"></div>
+                <h4>(UCT) Financial Aid</h4>
+                <p>The University of Cape Town  offers multiple financial aid options to help students manage their education costs.</p>
+                <a href="https://www.uct.ac.za/apply/funding/undergraduate/financial-aid"><h3>Learn More</h3></a>
+            </div>
+    
+            <div class="financial-stream">
+                <div class="financial-info"></div>
+                <h4>(UJ) Financial Aid</h4>
+                <p>The University of Johannesburg provides financial aid and funding solutions to assist students with their education costs.</p>
+                <a href="https://www.uj.ac.za/admission-aid/student-finance/"><h3>Learn More</h3></a>
+            </div>
+    
+            <!-- <div class="financial-stream">
+                <div class="financial-info"></div>
+                <h4>University of Pretoria Financial Aid</h4>
+                <p>Explore financial aid options at UP and apply for assistance based on need or merit.</p>
+                <a href="https://www.up.ac.za/student-funding"><h3>Learn More</h3></a>
+            </div> -->
+        </div>
+    </section>
+    
+    
+    <!-- end of financial-aid section -->
     <section class="services" id="services">
         <h2 class="heading">Services</h2>
-
         <div class="services-container">
             <div class="service-box">
                 <div class="service-info"></div>
@@ -201,7 +246,6 @@
                     unfamiliar terminology or complex language. UniApplyBot simplifies this by providing clear,
                     easy-to-understand guidance, ensuring that language is never a barrier to achieving higher education
                     goals.
-
                 </p>
             </div>
 
@@ -221,7 +265,6 @@
     <section class="testmonials" id="testimonials">
         <div class="testmonials-box">
             <h2 class="heading">Testimonials</h2>
-
             <div class="wrapper">
                 <div class="testimonials-item">
                     <img src="images/IMG-20220921-WA0008.jpg" alt="Pc-1's testimonial">
@@ -279,7 +322,9 @@
             </div>
         </div>
     </section>
-
+    <!-- this follows my forms -->
+   
+    <!-- this conclude it -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Us</span></h2>
         <form action="https://api.web3forms.com/submit" method="POST">
@@ -302,7 +347,7 @@
             </div>
         </form>
     </section>
-    
+  
     <footer class="footer">
         <div class="social">
             <a href="#"><i class='bx bxl-linkedin'></i></a>
@@ -349,7 +394,6 @@
                         <h5>@ UniApplyBot | All Rights Reserved!</h5>
                     </div>
                 </div>
-
             </div>
 
             <li>
