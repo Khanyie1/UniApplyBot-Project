@@ -52,6 +52,137 @@ body {
     z-index: 5;
 }
 
+/* style for icons (small screen) */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 0,
+    'GRAD' 0,
+    'opsz' 24
+}
+  
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;  
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.7s;
+    animation-name: fadeIn;
+    animation-duration: 0.2s
+}
+    
+/* Modal Content */
+.modal-content {
+    position: fixed;
+    bottom: 50%; 
+    left: 50%; 
+    transform: translate(-50%, 50%); 
+    background-color: #fefefe;
+    width: 60%; 
+    max-width: 1000px; 
+    height: auto; 
+    max-height: 80%; 
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.7s;
+    animation-name: slideIn;
+    animation-duration: 0.2s;
+}
+  
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+    
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+.modal-header {
+    padding: 2px 16px;
+    background-color: #00ffee;
+    color: white;
+}
+    
+.modal-body {padding: 2px 16px;}
+    
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #00ffee;
+    color: white;
+}
+    
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+    
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+    
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+    
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+/* style for collapsible*/
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+  
+.active1, .collapsible:hover {
+    background-color: #00cccc;
+}
+  
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active1:after {
+    content: "\2212";
+}
+  
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
 .logo {
     font-size: 3rem;
     color: var(--text-color);
