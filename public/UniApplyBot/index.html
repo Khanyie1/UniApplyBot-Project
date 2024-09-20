@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <script type="module" src="script.js" defer></script>
 </head>
@@ -31,24 +33,17 @@
 
     <!-- Mobile menu for small screens -->
     <nav class="mobile-menu">
-        <a href="#home" class="active"><i class="material-icons">home</i>Home</a>
-        <a href="#education"><i class="material-icons">school</i>Education</a>
-        <a href="#services"><i class="material-icons">volunteer_activism</i>Services</a>
-        <a href="#testimonials"><i class="material-icons">reviews</i>Testimonials</a>
-        <a href="#contact"><i class="material-icons">contacts</i>Contact Us</a>
-        <button id="logout2" class="logoutTwo"><i class="material-icons">logout</i>Log Out</button>
-        <a href="#home" class="active">Home</a>
-        <a href="#education">Education</a>
-        <a href="#Financial">Financial-aid</a>
-        <a href="#services">Services</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact Us</a>
-        <button id="logout2" class="logoutTwo">Log Out</button>
+        <a href="#home" class="active">Home<i class="material-icons">home</i></a>
+        <a href="#education">Education<i class="material-icons">school</i></a>
+        <a href="#services">Services<i class="material-icons">volunteer_activism</i></a>
+        <a href="#testimonials">Testimonials<i class="material-icons">reviews</i></a>
+        <a href="#contact">Contact Us<i class="material-icons">contacts</i></a>
+        <button id="logout2" class="logoutTwo">Log Out<i class="material-icons">logout</i></button>
     </nav>
 
     <section class="home" id="home">
         <div class="home-content">
-            
+
             <h1>Hi, it's <span>UniApplyBot</span></h1>
             <h3 class="text-animation"> I'm here to help with <span></span></h3>
             <p>
@@ -172,36 +167,48 @@
     <!-- financial-aid part -->
     <section id="Financial" class="services">
         <h2 class="heading">Financial Aid Assistance</h2>
-    
+
         <div class="financial-container">
             <div class="financial-stream">
                 <div class="financial-info"></div>
                 <h4>NSFAS</h4>
-                <p>National Student Financial Aid Scheme For South African students seeking financial aid, NSFAS provides extensive support for eligible students.</p>
-                <a href="https://www.nsfas.org.za/"> <h3>Learn more</h3></a>
+                <p>National Student Financial Aid Scheme For South African students seeking financial aid, NSFAS
+                    provides extensive support for eligible students.</p>
+                <a href="https://www.nsfas.org.za/">
+                    <h3>Learn more</h3>
+                </a>
             </div>
-    
+
             <div class="financial-stream">
                 <div class="financial-info"></div>
                 <h4>Wits University Financial Aid</h4>
-                <p>The University of the Witwatersrand offers financial assistance to students who meet the university’s financial aid criteria.</p>
-                <a href="https://www.wits.ac.za/study-at-wits/fees-and-funding/financial-aid/"><h3>Learn More</h3></a>
+                <p>The University of the Witwatersrand offers financial assistance to students who meet the university’s
+                    financial aid criteria.</p>
+                <a href="https://www.wits.ac.za/study-at-wits/fees-and-funding/financial-aid/">
+                    <h3>Learn More</h3>
+                </a>
             </div>
-    
+
             <div class="financial-stream">
                 <div class="financial-info"></div>
                 <h4>(UCT) Financial Aid</h4>
-                <p>The University of Cape Town  offers multiple financial aid options to help students manage their education costs.</p>
-                <a href="https://www.uct.ac.za/apply/funding/undergraduate/financial-aid"><h3>Learn More</h3></a>
+                <p>The University of Cape Town offers multiple financial aid options to help students manage their
+                    education costs.</p>
+                <a href="https://www.uct.ac.za/apply/funding/undergraduate/financial-aid">
+                    <h3>Learn More</h3>
+                </a>
             </div>
-    
+
             <div class="financial-stream">
                 <div class="financial-info"></div>
                 <h4>(UJ) Financial Aid</h4>
-                <p>The University of Johannesburg provides financial aid and funding solutions to assist students with their education costs.</p>
-                <a href="https://www.uj.ac.za/admission-aid/student-finance/"><h3>Learn More</h3></a>
+                <p>The University of Johannesburg provides financial aid and funding solutions to assist students with
+                    their education costs.</p>
+                <a href="https://www.uj.ac.za/admission-aid/student-finance/">
+                    <h3>Learn More</h3>
+                </a>
             </div>
-    
+
             <!-- <div class="financial-stream">
                 <div class="financial-info"></div>
                 <h4>University of Pretoria Financial Aid</h4>
@@ -210,8 +217,8 @@
             </div> -->
         </div>
     </section>
-    
-    
+
+
     <!-- end of financial-aid section -->
     <section class="services" id="services">
         <h2 class="heading">Services</h2>
@@ -256,74 +263,50 @@
                     Navigating university websites can be overwhelming. UniApplyBot simplifies the process by offering
                     quick and easy access to everything you need, from university information to course prospectuses and
                     faculty details. Stay informed and prepared with all the necessary information right at your
-                    fingertips. 
+                    fingertips.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="testmonials" id="testimonials">
-        <div class="testmonials-box">
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-box">
             <h2 class="heading">Testimonials</h2>
-            <div class="wrapper">
-                <div class="testimonials-item">
-                    <img src="images/IMG-20220921-WA0008.jpg" alt="Pc-1's testimonial">
-                    <h2>Khanyisa</h2>
-                    <div class="rating">
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sequi necessitatibus ducimus error commodi ex cumque,
-                        perspiciatis natus facilis temporibus possimus magnam excepturi facere quis quo! Quis et
-                        consequatur odit enim!
-                    </p>
-                </div>
-
-                <div class="testimonials-item">
-                    <img src="images/IMG-20220921-WA0008.jpg" alt="Pc-1's testimonial">
-                    <h2>Sotobe</h2>
-                    <div class="rating">
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sequi necessitatibus ducimus error commodi ex cumque,
-                        perspiciatis natus facilis temporibus possimus magnam excepturi facere quis quo! Quis et
-                        consequatur odit enim!
-                    </p>
-                </div>
-
-                <div class="testimonials-item">
-                    <img src="images/IMG-20220921-WA0008.jpg" alt="Pc-1's testimonial">
-                    <h2>Khanyisani</h2>
-                    <div class="rating">
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sequi necessitatibus ducimus error commodi ex cumque,
-                        perspiciatis natus facilis temporibus possimus magnam excepturi facere quis quo! Quis et
-                        consequatur odit enim!
-                    </p>
-                </div>
+            <div class="wrapper" id="testimonials-wrapper">
+                <!-- Testimonials will be dynamically inserted here -->
             </div>
         </div>
     </section>
+
+    <section class="testimonial-form-section">
+        <form id="testimonial-form">
+            <div class="form-group">
+                <h2>Your Rating</h2>
+                <div id="rating" class="star-rating">
+                    <span class="fa fa-star" data-value="1"></span>
+                    <span class="fa fa-star" data-value="2"></span>
+                    <span class="fa fa-star" data-value="3"></span>
+                    <span class="fa fa-star" data-value="4"></span>
+                    <span class="fa fa-star" data-value="5"></span>
+                </div>
+                <input type="hidden" id="rating-value" name="rating" required>
+            </div>
+            <h2>Submit Your Review</h2>
+            <div class="form-group">
+                <i class='bx bx-user'></i>
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <i class='bx bx-comment'></i>
+                <textarea id="comment" placeholder="Your Review" required></textarea>
+            </div>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+
     <!-- this follows my forms -->
-   
+
     <!-- this conclude it -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Us</span></h2>
@@ -334,20 +317,21 @@
                     <input type="text" name="username" id="username" placeholder="Full Name" required>
                     <input type="email" name="UserEmail" id="UserEmail" placeholder="Email" required>
                 </div>
-    
+
                 <div class="input-box">
                     <input type="number" name="UseNumber" id="UseNumber" placeholder="Phone Number" required>
                     <input type="text" name="subject" id="subject" placeholder="Subject" required>
                 </div>
             </div>
-    
+
             <div class="input-group-2">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"
+                    required></textarea>
                 <button type="submit" class="sendmessage-btn">Send Message</button>
             </div>
         </form>
     </section>
-  
+
     <footer class="footer">
         <div class="social">
             <a href="#"><i class='bx bxl-linkedin'></i></a>
@@ -391,7 +375,10 @@
                     </div>
 
                     <div class="modal-footer">
-                        <h5>@ UniApplyBot | All Rights Reserved!</h5>
+                        <h5>
+                            Have questions or need assistance? Reach out to us at
+                            <a id="contactLink" href="javascript:void(0);">uniapplybott@gmail.com</a>
+                        </h5>
                     </div>
                 </div>
             </div>
@@ -417,4 +404,5 @@
         </p>
     </footer>
 </body>
+
 </html>
