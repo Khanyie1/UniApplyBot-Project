@@ -731,15 +731,32 @@ p {
 
 /* Styling for the testimonial form section */
 .testimonial-form-section {
-    background-color: var(--bg-color);
-    padding: 4rem 2rem;
+    border: 5px solid transparent;
+    background-color: var(--main-color); 
+    border-radius: 3rem; 
+    transition: 0.4s ease-in-out; 
+    padding: 2em; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    margin-top: 8em;
+}
+
+.testimonial-form-section:hover {
+    background-color: transparent;
+    border: 5px solid var(--main-color); 
+    transform: scale(1.05); 
 }
 
 .testimonial-form-section h2 {
     margin-bottom: 3rem;
-    color: white;
+    color: black; 
     text-align: center;
     font-size: 3.6em;
+    transition: color 0.4s ease-in-out;
+}
+
+.testimonial-form-section:hover h2 {
+    color: white;
 }
 
 #testimonial-form {
