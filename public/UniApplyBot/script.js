@@ -121,3 +121,121 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
+
+// Import necessary Firebase modules
+import { db } from '../frontend/firebaseAPI.js';
+import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+
+// Reference to the testimonials collection in Firestore
+const testimonialsRef = collection(db, "testimonials");
+
+// Fetch and display testimonials
+async function fetchTestimonials() {
+    try {
+        const querySnapshot = await getDocs(testimonialsRef);
+        const testimonialsWrapper = document.getElementById('testimonials-wrapper');
+        testimonialsWrapper.innerHTML = querySnapshot.docs.map(doc => {
+            const t = doc.data();
+            return `
+                <div class="testimonials-item">
+                    <img class="profile-icon" src="${t.imageUrl || '../UniApplyBot/images/profile-icon.jpg'}" alt="${t.name}'s testimonial">
+                    <h2>${t.name}</h2>
+                    <div class="rating">
+                        ${'★'.repeat(t.rating).padEnd(5, '☆')}
+                    </div>
+                    <p>${t.comment}</p>
+                </div>
+            `;
+        }).join('');
+    } catch (error) {
+        console.error("Error fetching testimonials: ", error);
+    }
+}
+
+let ratingValue;
+
+// Add event listener for each star
+document.querySelectorAll('.fa-star').forEach(star => {
+    star.addEventListener('click', function() {
+        ratingValue = this.getAttribute('data-value'); // Get clicked star's value
+        document.getElementById('rating-value').value = ratingValue; // Update the hidden input with the rating
+
+        // Clear all previous stars
+        clearStars();
+
+        // Highlight all stars up to the clicked one
+        highlightStars(ratingValue);
+    });
+});
+
+// Function to highlight the stars up to the selected rating
+function highlightStars(value) {
+    document.querySelectorAll('.fa-star').forEach(star => {
+        if (parseInt(star.getAttribute('data-value')) <= value) {
+            star.classList.add('selected'); // Add 'selected' class to highlight star
+            star.style.color = 'gold'; // Change the color to gold
+        }
+    });
+}
+
+// Function to clear all star highlights
+function clearStars() {
+    document.querySelectorAll('.fa-star').forEach(star => {
+        star.classList.remove('selected'); // Remove the 'selected' class
+        star.style.color = ''; // Reset the star color
+    });
+}
+
+// Add event listener to the form
+document.getElementById('testimonial-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+    const rating = ratingValue;
+
+    if (!rating) {
+      alert("Please select a star rating.");
+      return;
+    }
+
+    // Add a new testimonial to Firestore
+    try {
+        await addDoc(testimonialsRef, { name, comment, rating });
+        fetchTestimonials(); // Update testimonials after submission
+        // Clear the form
+        document.getElementById('testimonial-form').reset();
+        clearStars(); // Clear stars after submission
+    } catch (error) {
+        console.error("Error adding testimonial: ", error);
+    }
+});
+
+// Load testimonials on page load
+fetchTestimonials();
+
+document.addEventListener('DOMContentLoaded', function () {
+  const contactLink = document.getElementById('contactLink');
+  const contactSection = document.getElementById('contact'); 
+  const modal = document.getElementById('myModal');
+  const closeModalButton = document.querySelector('.modal .close');
+  contactLink.addEventListener('click', function () {
+    
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      if (modal) {
+          modal.style.display = 'none';
+      }
+  });
+
+  closeModalButton.addEventListener('click', function () {
+      modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', function (event) {
+      if (event.target == modal) {
+          modal.style.display = 'none';
+      }
+  });
+});
+
+
+
