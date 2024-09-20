@@ -871,7 +871,6 @@ span {
 }
 
 /* Responsiveness */
-
 @media (min-width:992px) and (max-width:1285px){
     html {
         font-size: 55%;
@@ -1295,13 +1294,12 @@ span {
         transition: 0.3s ease-in-out;
     }
 
-
-.timeline-content p {
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 20px;
-}
+    .timeline-content p {
+        color: white;
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 20px;
+    }
 
     .home {
         display: flex;
@@ -1316,10 +1314,10 @@ span {
 
     .home-content {
         padding-bottom: 35px;
-}}
+    }
+}
 
 /* financial aid*/
-
 .financial-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1350,14 +1348,8 @@ span {
     margin: auto;
 }
 
-
-
 .financial-stream h4 {
     font-size: 3rem;
     font-weight: 800;
     line-height: 2;
 }
-
-/* finacial aid */
-
-
