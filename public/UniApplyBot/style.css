@@ -445,12 +445,14 @@ p {
 .logoutOne {
     background: transparent;
 }
+
 .tooltip .tooltiptext {
     width: 120px;
     top: 100%;
     left: 50%;
     margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-  }
+}
+
 .logoutTwo {
     color: white;
     padding: 10px 0px;
@@ -458,10 +460,8 @@ p {
     background: transparent;
 }
 
-
 .text-animation span {
-    position: relative;
-    
+    position: relative;   
 }
 
 .text-animation::after {
@@ -1298,7 +1298,6 @@ p {
         border: 5px solid transparent;
         cursor: pointer;
         transition: 0.4s ease-in-out;
-       
     }
     
     .service-box:hover {
@@ -1307,6 +1306,7 @@ p {
         border: 5px solid var(--main-color);
         transform: scale(1.05);
     }
+
     .header,
     .home,
     .education,
@@ -1415,7 +1415,7 @@ p {
 /* financial aid*/
 .financial-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, 2, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
