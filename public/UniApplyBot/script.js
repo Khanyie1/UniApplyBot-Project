@@ -188,15 +188,27 @@ function clearStars() {
 
 // Add event listener to the form
 document.getElementById('testimonial-form').addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const comment = document.getElementById('comment').value;
-    const rating = ratingValue;
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const comment = document.getElementById('comment').value;
+  const rating = ratingValue;
 
-    if (!rating) {
-      alert("Please select a star rating.");
+  if (!rating) {
+      const alertMessage = document.getElementById('alert-message');
+      alertMessage.textContent = "Please select a star rating.";
+      alertMessage.style.display = 'block';
+      alertMessage.style.opacity = '1';
+
+      setTimeout(() => {
+          alertMessage.style.opacity = '0';
+          setTimeout(() => {
+              alertMessage.style.display = 'none';
+          }, 1000); // Delay for fade-out animation
+      }, 7000);
+      
       return;
-    }
+  }
+
 
     // Add a new testimonial to Firestore
     try {
