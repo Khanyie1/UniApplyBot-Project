@@ -1528,5 +1528,22 @@ p {
     .testimonials-item p {
         font-size: 1.3rem;
     }
+
+    .modal-content {
+        background-color: #fefefe;
+        width: 90%;
+    }
+
+    .model-header {
+        font-size: 2.2em;
+    }
+
+    .collapsible {
+        font-size: 14px;
+    }
+
+    .footer ul {
+        font-size: 1.4em;
+    }
 }
 
