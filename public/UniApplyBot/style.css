@@ -61,6 +61,43 @@ body {
     'opsz' 24
 }
 
+/* financial aid*/
+.financial-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.financial-stream:hover {
+    background: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.05);
+}
+.financial-stream{
+    background-color: var(--main-color);
+    height: 200px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    padding: 3em 3em;
+}
+.financial-stream p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    line-height: 1.4;
+    margin: auto;
+}
+
+.financial-stream h4 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 2;
+}
+
 .modal {
     display: none; 
     position: fixed; 
@@ -1373,9 +1410,21 @@ p {
     }
 
     .service-box h4 {
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-weight: 800;
         line-height: 2;
+    }
+
+    .service-box p {
+        font-size: 1.4rem;
+    }
+
+    .financial-stream h4 {
+        font-size: 1.7rem;
+    }
+
+    .financial-stream p{
+        font-size: 1.4rem;
     }
   
     .timeline-items::before {
@@ -1481,39 +1530,3 @@ p {
     }
 }
 
-/* financial aid*/
-.financial-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 2, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.financial-stream:hover {
-    background: white;
-    color: black;
-    border: 5px solid var(--main-color);
-    transform: scale(1.05);
-}
-.financial-stream{
-    background-color: var(--main-color);
-    height: 200px;
-    border-radius: 3rem;
-    border: 5px solid transparent;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-    padding: 3em 3em;
-}
-.financial-stream p{
-    font-size: 1.6rem;
-    font-weight: 400;
-    max-height: 100px;
-    line-height: 1.4;
-    margin: auto;
-}
-
-.financial-stream h4 {
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 2;
-}
