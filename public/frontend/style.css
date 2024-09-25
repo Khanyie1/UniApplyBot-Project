@@ -441,4 +441,18 @@ span#passwordTooltip {
     .login-header{
         display: none;
     }
+
+    .message {
+        background-color: hsl(327,90%,28%);
+        color: white;
+        padding: 10px 20px;
+        margin-left:100px;
+        margin-right: 100px;
+        border-radius: 5px;
+        font-size: 12px;
+        opacity: 0;
+        animation: fadeOut 7s forwards;
+        display:none; 
+        text-align: center;
+    }
 }
