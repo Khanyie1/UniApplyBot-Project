@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +42,6 @@
 
     <section class="home" id="home">
         <div class="home-content">
-
             <h1>Hi, it's <span>UniApplyBot</span></h1>
             <h3 class="text-animation"> I'm here to help with <span></span></h3>
             <p>
@@ -80,7 +78,10 @@
         </div>
         <!-- Chatbot container -->
         <div id="chatbot-container">
-            <df-messenger chat-title="UniApplyBot" agent-id="0f82854e-dc09-4500-aba1-3cd3b951fdae" language-code="en">
+            <df-messenger 
+                chat-title="UniApplyBot ENG" 
+                agent-id="0f82854e-dc09-4500-aba1-3cd3b951fdae" 
+                language-code="en">
             </df-messenger>
         </div>
 
@@ -94,8 +95,10 @@
                     chatbotContainer.removeChild(existingMessenger);
                 }
 
+                const chatTitle = language === 'en' ? 'UniApplyBot ENG' : 'UniApplyBot Zulu';
+
                 const dfMessenger = document.createElement('df-messenger');
-                dfMessenger.setAttribute('chat-title', 'UniApplyBot');
+                dfMessenger.setAttribute('chat-title', chatTitle);
                 dfMessenger.setAttribute('agent-id', language === 'en' ? '0f82854e-dc09-4500-aba1-3cd3b951fdae' : '0a44566d-bfa6-4c72-844a-aba2c7132065');
                 dfMessenger.setAttribute('language-code', language);
 

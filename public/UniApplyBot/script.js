@@ -157,13 +157,10 @@ let ratingValue;
 // Add event listener for each star
 document.querySelectorAll('.fa-star').forEach(star => {
     star.addEventListener('click', function() {
-        ratingValue = this.getAttribute('data-value'); // Get clicked star's value
-        document.getElementById('rating-value').value = ratingValue; // Update the hidden input with the rating
+        ratingValue = this.getAttribute('data-value');
+        document.getElementById('rating-value').value = ratingValue;
 
-        // Clear all previous stars
         clearStars();
-
-        // Highlight all stars up to the clicked one
         highlightStars(ratingValue);
     });
 });
@@ -172,8 +169,8 @@ document.querySelectorAll('.fa-star').forEach(star => {
 function highlightStars(value) {
     document.querySelectorAll('.fa-star').forEach(star => {
         if (parseInt(star.getAttribute('data-value')) <= value) {
-            star.classList.add('selected'); // Add 'selected' class to highlight star
-            star.style.color = 'gold'; // Change the color to gold
+            star.classList.add('selected');
+            star.style.color = 'gold';
         }
     });
 }
@@ -181,8 +178,8 @@ function highlightStars(value) {
 // Function to clear all star highlights
 function clearStars() {
     document.querySelectorAll('.fa-star').forEach(star => {
-        star.classList.remove('selected'); // Remove the 'selected' class
-        star.style.color = ''; // Reset the star color
+        star.classList.remove('selected');
+        star.style.color = '';
     });
 }
 
