@@ -1237,6 +1237,11 @@ p {
         padding-bottom: 0px;
     }
 
+    .financial-stream {
+        box-shadow: 0 0 10px var(--main-color);
+        transition: 0.3s ease-in-out;
+    }
+
     .home-content {
         padding-bottom: 35px;
     }
@@ -1476,6 +1481,107 @@ p {
     .home-content {
         padding-bottom: 35px;
     }
+<<<<<<< HEAD
+    /* financial-aid responsiveness below */
+    .financial-stream {
+            background-color: var(--bg-color);
+            border: 3px solid var(--main-color);
+            padding: 15px 25px;
+            border-radius: 4rem;
+            box-shadow: 0 0 10px var(--main-color);
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+    /* until here  */
+}
+
+/* financial aid*/
+/* Overall black background */
+section#Financial {
+    background-color: black;
+    padding: 2rem;
+}
+
+/* Container responsive layout */
+.financial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid to fit screen sizes */
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* Financial stream card styles */
+.financial-stream {
+    background-color: var(--main-color);
+    height: auto; /* Remove fixed height to allow content resizing */
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    padding: 2rem; /* Adjusted padding for better scaling */
+    text-align: center; /* Center content for a cleaner look */
+}
+
+.financial-stream:hover {
+    background-color: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.05);
+}
+
+/* Text inside the financial stream */
+.financial-stream h4 {
+    font-size: 2rem; /* Reduced for better scaling */
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.financial-stream p {
+    font-size: 1.4rem; /* Slightly smaller for better fit on small screens */
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 1rem;
+    max-height: 120px;
+}
+
+/* Hover effect */
+.financial-stream:hover h4, 
+.financial-stream:hover p {
+    color: var(--main-color);
+}
+
+/* Media queries for smaller screens */
+
+/* Large mobile screens (up to 768px) */
+@media (max-width: 768px) {
+    .financial-stream {
+        padding: 1.5rem; /* Smaller padding on mobile */
+    }
+    
+    .financial-stream h4 {
+        font-size: 2.5rem; /* Slightly larger heading for tablets */
+    }
+
+    .financial-stream p {
+        font-size: 1.4rem; /* Keep p size slightly smaller */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media (max-width: 480px) {
+    .financial-stream {
+        padding: 1rem; /* Reduce padding for small devices */
+    }
+    
+    .financial-stream h4 {
+        font-size: 2rem; /* Adjusted for better fit */
+    }
+
+    .financial-stream p {
+        font-size: 1.2rem; /* Smaller text on small screens */
+    }
+}
+=======
 
     section {
         min-height: 100%;
@@ -1562,3 +1668,4 @@ p {
 }
 
 
+>>>>>>> 9e091040b15bf2ceb15a246647692ca4015dc21c
