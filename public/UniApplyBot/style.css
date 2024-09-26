@@ -61,6 +61,43 @@ body {
     'opsz' 24
 }
 
+/* financial aid*/
+.financial-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.financial-stream:hover {
+    background: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.05);
+}
+.financial-stream{
+    background-color: var(--main-color);
+    height: 200px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    padding: 3em 3em;
+}
+.financial-stream p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    line-height: 1.4;
+    margin: auto;
+}
+
+.financial-stream h4 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 2;
+}
+
 .modal {
     display: none; 
     position: fixed; 
@@ -181,30 +218,6 @@ body {
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
 }
-
-.message {
-    background-color: hsl(327, 90%, 28%);
-    color: white;
-    padding: 10px 20px;
-    margin: 20px auto;
-    width: 80%; 
-    border-radius: 5px;
-    font-size: 2rem;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-    text-align: center;
-    position: relative; 
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
 
 .logo {
     font-size: 3rem;
@@ -750,7 +763,7 @@ p {
 }
 
 .testimonials-item p {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
 /* Styling for the testimonial form section */
@@ -1247,29 +1260,6 @@ p {
         display: none;
     }
 
-    .message {
-        background-color: hsl(327, 90%, 28%);
-        color: white;
-        padding: 10px 20px;
-        margin: 20px auto;
-        width: 80%; 
-        border-radius: 5px;
-        font-size: 1rem;
-        opacity: 0;
-        transition: opacity 1s ease-out;
-        text-align: center;
-        position: relative; 
-    }
-    
-    @keyframes fadeOut {
-        from {
-            opacity: 1;
-        }
-        to {
-            opacity: 0;
-        }
-    }
-
     .navbar .active {
         display: block;
     }
@@ -1425,9 +1415,21 @@ p {
     }
 
     .service-box h4 {
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-weight: 800;
         line-height: 2;
+    }
+
+    .service-box p {
+        font-size: 1.4rem;
+    }
+
+    .financial-stream h4 {
+        font-size: 1.7rem;
+    }
+
+    .financial-stream p{
+        font-size: 1.4rem;
     }
   
     .timeline-items::before {
@@ -1479,6 +1481,7 @@ p {
     .home-content {
         padding-bottom: 35px;
     }
+<<<<<<< HEAD
     /* financial-aid responsiveness below */
     .financial-stream {
             background-color: var(--bg-color);
@@ -1578,3 +1581,91 @@ section#Financial {
         font-size: 1.2rem; /* Smaller text on small screens */
     }
 }
+=======
+
+    section {
+        min-height: 100%;
+        padding:auto;
+        width: 100%;
+    }
+
+    .testimonials-item {
+        padding: 30px 20px;
+    }
+
+    .star-rating .fa {
+        color: white;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    
+    .star-rating .fa.checked {
+        color: gold; 
+    }
+    
+    .rating {
+        color: gold;
+        font-size: 25px;
+    }
+
+    .testimonials-item h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-form-section {
+        border: 5px solid transparent;
+        background-color: var(--main-color); 
+        border-radius: 3rem; 
+        transition: 0.4s ease-in-out; 
+        padding: 1em 1em; 
+        max-width: 300px; 
+        margin-top: 8em;
+    }
+
+    .testimonial-form-section h2 {
+        font-size: 2.2em;
+    }
+
+    #testimonial-form input,
+    #testimonial-form textarea { 
+    font-size: 1.8rem;
+    }
+
+    .testimonials-item p {
+        font-size: 1.3rem;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        width: 90%;
+    }
+
+    .model-header {
+        font-size: 2.2em;
+    }
+
+    .collapsible {
+        font-size: 14px;
+    }
+
+    .footer ul {
+        font-size: 1.4em;
+    }
+
+    .message {
+        background-color: hsl(327, 90%, 28%);
+        color: white;
+        padding: 10px 20px;
+        margin: 20px auto;
+        width: 80%;
+        border-radius: 5px;
+        font-size: 1rem;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+        text-align: center;
+        position: relative;
+    }
+}
+
+
+>>>>>>> 9e091040b15bf2ceb15a246647692ca4015dc21c
