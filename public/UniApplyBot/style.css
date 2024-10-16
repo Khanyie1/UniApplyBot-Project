@@ -1481,7 +1481,7 @@ p {
     .home-content {
         padding-bottom: 35px;
     }
-<<<<<<< HEAD
+
     /* financial-aid responsiveness below */
     .financial-stream {
             background-color: var(--bg-color);
@@ -1580,8 +1580,6 @@ section#Financial {
     .financial-stream p {
         font-size: 1.2rem; /* Smaller text on small screens */
     }
-}
-=======
 
     section {
         min-height: 100%;
@@ -1666,6 +1664,3 @@ section#Financial {
         position: relative;
     }
 }
-
-
->>>>>>> 9e091040b15bf2ceb15a246647692ca4015dc21c
