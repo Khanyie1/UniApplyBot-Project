@@ -18,15 +18,24 @@
   "keywords": [],
   "author": "",
   "contributors": [],
-  "scripts": {
-    "dev": "nodemon express.js",
-    "test": ""
-  },
+ "scripts": {
+  "start": "live-server public/UniApplyBot",
+  "dev": "nodemon src/express.js",
+  "test": "",
+  "build": "echo Build complete"
+},
+
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "http-proxy-middleware": "^3.0.3",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "open": "^10.1.0",
+    "resolve-url": "^0.2.1",
+    "source-map-resolve": "^0.6.0",
+    "source-map-url": "^0.4.1",
+    "urix": "^0.1.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "live-server": "^1.2.2"
