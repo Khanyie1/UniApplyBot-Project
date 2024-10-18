@@ -59,7 +59,7 @@ try {
   
     signOut(auth)
     .then(() => {
-      window.location.href = "../frontend/login.html"
+      window.location.href = "../frontend/index.html"
     })
     .catch((error) => {
       console.error("Error signing out", error)
@@ -75,7 +75,7 @@ try {
   logout2.addEventListener("click", () => {
     signOut(auth)
     .then(() => {
-      window.location.href = "../frontend/login.html"
+      window.location.href = "../frontend/index.html"
     })
     .catch((error) => {
       console.error("Error signing out", error)
