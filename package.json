@@ -19,17 +19,13 @@
   "author": "",
   "contributors": [],
   "scripts": {
-    "dev": "nodemon express.js",
+    "dev": "nodemon frontend/login.html",
     "test": ""
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.1",
-    "http-proxy-middleware": "^3.0.3",
     "nodemon": "^3.1.7"
-  },
-  "devDependencies": {
-    "live-server": "^1.2.2"
   },
   "description": ""
 }
