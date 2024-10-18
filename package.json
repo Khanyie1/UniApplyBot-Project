@@ -19,7 +19,8 @@
   "author": "",
   "contributors": [],
   "scripts": {
-    "dev": "nodemon frontend/login.html",
+    "start": "live-server public/frontend/login.html",
+    "dev": "",
     "test": ""
   },
   "dependencies": {
