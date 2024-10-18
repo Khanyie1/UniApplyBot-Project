@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 import { auth } from './firebaseAPI.js';
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
-import { validateEmail } from '../frontend/validation/validation.js';
+import { validateEmail } from './validation/validation.js';
 
 function showMessage(message, divId) {
     var messageDiv = document.getElementById(divId);
