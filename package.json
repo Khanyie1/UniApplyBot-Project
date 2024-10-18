@@ -19,7 +19,7 @@
   "author": "",
   "contributors": [],
   "scripts": {
-    "start": "live-server public/frontend/login.html",
+    "start": "live-server public/frontend",
     "dev": "",
     "test": ""
   },

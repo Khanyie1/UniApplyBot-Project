@@ -92,7 +92,7 @@ registerBtn.addEventListener('click', (e) => {
             const docRef = doc(db, "users", user.uid);
             setDoc(docRef, userData)
             .then(() => {
-                window.location.href = "./login.html"
+                window.location.href = "./index.html"
             })
             .catch((error) => {
                 console.error("Problem creating the account.", error)
