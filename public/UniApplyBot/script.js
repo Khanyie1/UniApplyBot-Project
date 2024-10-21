@@ -138,7 +138,7 @@ async function fetchTestimonials() {
             const t = doc.data();
             return `
                 <div class="testimonials-item">
-                    <img class="profile-icon" src="${t.imageUrl || '../UniApplyBot/images/profile-icon.jpg'}" alt="${t.name}'s testimonial">
+                    <img class="profile-icon" src="${t.imageUrl || './images/profile-icon.jpg'}" alt="${t.name}'s testimonial">
                     <h2>${t.name}</h2>
                     <div class="rating">
                         ${'★'.repeat(t.rating).padEnd(5, '☆')}
