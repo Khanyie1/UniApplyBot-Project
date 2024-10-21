@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 import { auth, db } from './firebaseAPI.js';
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
-import { validateEmail, validateUsername } from '../frontend/validation/validation.js';
+import { validateEmail, validateUsername } from './validation/validation.js';
 
 function showMessage(message, divId) {
     var messageDiv = document.getElementById(divId);

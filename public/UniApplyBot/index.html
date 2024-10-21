@@ -3,417 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniApplyBot</title>
-    <link rel="icon" href="/public/UniApplyBot/favicon.webp" type="image/x-icon">
+    <title>Login</title>
+    <link rel="icon" href="/public/frontend/favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <script type="module" src="script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="module" src="./firebaseAPI.js" defer></script>
+    <script type="module" src="./login.js" defer></script>
+    <script src="https://kit.fontawesome.com/6d06f9f594.js" crossorigin="anonymous"></script>
 </head>
-
-<body>
-    <header class="header">
-        <a href="#home" class="logo"> I'm
-            <span>UniApplyBot</span>
-        </a>
-
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#education">Education</a>
-            <a href="#Financial">Financial-aid</a>
-            <a href="#services">Services</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact Us</a>
-            <button id="logout" class="logoutOne">Log Out</button>
-        </nav>
+<body class="home-frontend">
+    <header class="login-header header2">
+        <img src="./image/logo.webp" class="logo-frontend">
     </header>
 
-    <!-- Mobile menu for small screens -->
-    <nav class="mobile-menu">
-        <a href="#home" class="active">Home<i class="material-icons">home</i></a>
-        <a href="#education">Education<i class="material-icons">school</i></a>
-        <a href="#services">Services<i class="material-icons">volunteer_activism</i></a>
-        <a href="#testimonials">Testimonials<i class="material-icons">reviews</i></a>
-        <a href="#contact">Contact Us<i class="material-icons">contacts</i></a>
-        <button id="logout2" class="logoutTwo">Log Out<i class="material-icons">logout</i></button>
-    </nav>
-
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hi, it's <span>UniApplyBot</span></h1>
-            <h3 class="text-animation"> I'm here to help with <span></span></h3>
-            <p>
-                Meet UniApplyBot, your personal guide to simplifying university applications! Whether you're searching
-                for the perfect course, browsing prospectuses, or seeking real-time support, UniApplyBot has you
-                covered. Ready to kickstart your university journey with expert guidance? Open the chat now and let
-                UniApplyBot assist you!
-            </p>
-
-            <div class="social-icons">
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></a>
-                <a href="#"><i class='bx bxl-tiktok'></i></a>
-            </div>
-
-            <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact" class="btn">Contact</a>
-                <a href="#" class="bot" id="toggleBotButton">Bot</a>
-            </div>
-        </div>
-
-        <div class="home-img">
-            <img src="images/logo.webp" alt="code snippet">
-        </div>
-
-        <div>
-            <label for="languageSelect" class="language-label">Choose Language: </label>
-            <select id="languageSelect" class="styled-select" onchange="setLanguage()">
-                <option value="en">English</option>
-                <option value="zu">Zulu</option>
-            </select>
-        </div>
-        <!-- Chatbot container -->
-        <div id="chatbot-container">
-            <df-messenger 
-                chat-title="UniApplyBot ENG" 
-                agent-id="0f82854e-dc09-4500-aba1-3cd3b951fdae" 
-                language-code="en">
-            </df-messenger>
-        </div>
-
-        <script>
-            function setLanguage() {
-                const language = document.getElementById('languageSelect').value;
-                const chatbotContainer = document.getElementById('chatbot-container');
-
-                const existingMessenger = chatbotContainer.querySelector('df-messenger');
-                if (existingMessenger) {
-                    chatbotContainer.removeChild(existingMessenger);
-                }
-
-                const chatTitle = language === 'en' ? 'UniApplyBot ENG' : 'UniApplyBot Zulu';
-
-                const dfMessenger = document.createElement('df-messenger');
-                dfMessenger.setAttribute('chat-title', chatTitle);
-                dfMessenger.setAttribute('agent-id', language === 'en' ? '0f82854e-dc09-4500-aba1-3cd3b951fdae' : '0a44566d-bfa6-4c72-844a-aba2c7132065');
-                dfMessenger.setAttribute('language-code', language);
-
-                chatbotContainer.appendChild(dfMessenger);
-            }
-        </script>
-    </section>
-
-    <section id="education" class="education">
-        <h2 class="heading">Education</h2>
-        <div class="timeline-items">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2021</div>
-                <div class="timeline-content">
-                    <h3>High School</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ea aliquid recusandae ipsam,
-                        quisquam deleniti culpa consequuntur doloribus quia error placeat enim eius quas sed
-                        exercitationem quis sunt harum? Aspernatur, ipsa?
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2022</div>
-                <div class="timeline-content">
-                    <h3>Tertiary</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ea aliquid recusandae ipsam,
-                        quisquam deleniti culpa consequuntur doloribus quia error placeat enim eius quas sed
-                        exercitationem quis sunt harum? Aspernatur, ipsa?
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2023</div>
-                <div class="timeline-content">
-                    <h3>Internship</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ea aliquid recusandae ipsam,
-                        quisquam deleniti culpa consequuntur doloribus quia error placeat enim eius quas sed
-                        exercitationem quis sunt harum? Aspernatur, ipsa?
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2024</div>
-                <div class="timeline-content">
-                    <h3>First Job</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ea aliquid recusandae ipsam,
-                        quisquam deleniti culpa consequuntur doloribus quia error placeat enim eius quas sed
-                        exercitationem quis sunt harum? Aspernatur, ipsa?
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- financial-aid part -->
-    <section id="Financial" class="services">
-        <h2 class="heading">Financial Aid Assistance</h2>
-
-        <div class="financial-container">
-            <div class="financial-stream">
-                <div class="financial-info"></div>
-                <h4>NSFAS</h4>
-                <p>National Student Financial Aid Scheme For South African students seeking financial aid, NSFAS
-                    provides extensive support for eligible students.</p>
-                <a href="https://www.nsfas.org.za/">
-                    <h3>Learn more</h3>
-                </a>
-            </div>
-
-            <div class="financial-stream">
-                <div class="financial-info"></div>
-                <h4>Wits University Financial Aid</h4>
-                <p>The University of the Witwatersrand offers financial assistance to students who meet the university’s
-                    financial aid criteria.</p>
-                <a href="https://www.wits.ac.za/study-at-wits/fees-and-funding/financial-aid/">
-                    <h3>Learn More</h3>
-                </a>
-            </div>
-
-            <div class="financial-stream">
-                <div class="financial-info"></div>
-                <h4>(UCT) Financial Aid</h4>
-                <p>The University of Cape Town offers multiple financial aid options to help students manage their
-                    education costs.</p>
-                <a href="https://www.uct.ac.za/apply/funding/undergraduate/financial-aid">
-                    <h3>Learn More</h3>
-                </a>
-            </div>
-
-            <div class="financial-stream">
-                <div class="financial-info"></div>
-                <h4>(UJ) Financial Aid</h4>
-                <p>The University of Johannesburg provides financial aid and funding solutions to assist students with
-                    their education costs.</p>
-                <a href="https://www.uj.ac.za/admission-aid/student-finance/">
-                    <h3>Learn More</h3>
-                </a>
-            </div>
-
-            <!-- <div class="financial-stream">
-                <div class="financial-info"></div>
-                <h4>University of Pretoria Financial Aid</h4>
-                <p>Explore financial aid options at UP and apply for assistance based on need or merit.</p>
-                <a href="https://www.up.ac.za/student-funding"><h3>Learn More</h3></a>
-            </div> -->
-        </div>
-    </section>
-
-
-    <!-- end of financial-aid section -->
-    <section class="services" id="services">
-        <h2 class="heading">Services</h2>
-        <div class="services-container">
-            <div class="service-box">
-                <div class="service-info"></div>
-                <h4>Reduced Complexity</h4>
-                <p>
-                    The university application process can be daunting due to its complexity. UniApplyBot streamlines
-                    this experience by consolidating all relevant information in one place. It directs users to the
-                    relavant links, provides detailed information, and simplifies the process. Therefore, reducing the
-                    confusion of navigating multiple platforms and forms.
-                </p>
-            </div>
-
-            <div class="service-box">
-                <div class="service-info"></div>
-                <h4>Time-Saving Solution</h4>
-                <p>
-                    Many students face time constraints when trying to gather information from different sources.
-                    UniApplyBot saves time by providing immediate answers to questions, from providing information on
-                    institutions to providing prospectuses, allowing users to focus more on their studies and less on
-                    information searches.
-                </p>
-            </div>
-
-            <div class="service-box">
-                <div class="service-info"></div>
-                <h4>Language Support</h4>
-                <p>
-                    Accessing university application information can be challenging, especially when faced with
-                    unfamiliar terminology or complex language. UniApplyBot simplifies this by providing clear,
-                    easy-to-understand guidance, ensuring that language is never a barrier to achieving higher education
-                    goals.
-                </p>
-            </div>
-
-            <div class="service-box">
-                <div class="service-info"></div>
-                <h4>Streamlined University Access</h4>
-                <p>
-                    Navigating university websites can be overwhelming. UniApplyBot simplifies the process by offering
-                    quick and easy access to everything you need, from university information to course prospectuses and
-                    faculty details. Stay informed and prepared with all the necessary information right at your
-                    fingertips.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials" id="testimonials">
-        <div class="testimonials-box">
-            <h2 class="heading">Testimonials</h2>
-            <div class="wrapper" id="testimonials-wrapper">
-                <!-- Testimonials will be dynamically inserted here -->
-            </div>
-        </div>
-    </section>
-    
-    
-    <section class="testimonial-form-section">
-        <div class="test">
-            <form id="testimonial-form">
-                <div class="form-group">
-                    <h2>Your Rating</h2>
-
-                    <div id="alert-message" class="message" style="display:none; text-align: center;"></div>
-
-                    <div id="rating" class="star-rating">
-                        <span class="fa fa-star" data-value="1"></span>
-                        <span class="fa fa-star" data-value="2"></span>
-                        <span class="fa fa-star" data-value="3"></span>
-                        <span class="fa fa-star" data-value="4"></span>
-                        <span class="fa fa-star" data-value="5"></span>
+    <section class="home-login">
+        <div id="SignInMessage" class="message" style="display:none; text-align: center;"></div> 
+        <div class="wrapper-page">
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" id="email" required>
+                        <label>Email</label>
                     </div>
-                    <input type="hidden" id="rating-value" name="rating" required>
-                </div>
-                <h2>Submit Your Review</h2>
-                <div class="form-group">
-                    <i class='bx bx-user'></i>
-                    <input type="text" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <i class='bx bx-comment'></i>
-                    <textarea id="comment" placeholder="Your Review" required></textarea>
-                </div>
-                <button type="submit">Submit Review</button>
-            </form>
-        </div>
+                    <div class="input-box2">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" id="password" required>
+                        <span class="eye" style="color: #7a797e"><i class="fa-solid fa-eye" id="eye"></i></span>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forget">
+                        <a href="./forgot.html">Forgot Password?</a>
+                    </div>
+                   
+                    <button type="submit" class="btn" id="login">Login</button>
+                                            
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="./register.html" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
     </section>
-    
-
-
-    <!-- this follows my forms -->
-
-    <!-- this conclude it -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Us</span></h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="96dd6c5d-cfe2-4abc-a0d9-58c9e2f3a55f">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" name="username" id="username" placeholder="Full Name" required>
-                    <input type="email" name="UserEmail" id="UserEmail" placeholder="Email" required>
-                </div>
-
-                <div class="input-box">
-                    <input type="number" name="UseNumber" id="UseNumber" placeholder="Phone Number" required>
-                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                </div>
-            </div>
-
-            <div class="input-group-2">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"
-                    required></textarea>
-                <button type="submit" class="sendmessage-btn">Send Message</button>
-            </div>
-        </form>
-    </section>
-
-    <footer class="footer">
-        <div class="social">
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-            <a href="#"><i class='bx bxl-github'></i></a>
-            <a href="#"><i class='bx bxl-whatsapp'></i></a>
-            <a href="#"><i class='bx bxl-tiktok'></i></a>
-        </div>
-
-        <ul>
-            <li>
-                <a id="myBtn">FAQ</a>
-            </li>
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <h2>Frequently Asked Questions</h2>
-                    </div>
-
-                    <div class="modal-body" style="color: black">
-                        <button class="collapsible">1. Is UniApplyBot free to use?</button>
-                        <div class="content">
-                            <p>Yes, UniApplyBot is completely free for students. We aim to provide accessible solutions
-                                to ease the university application process.</p>
-                        </div>
-
-                        <button class="collapsible">2. How do I know my data is safe?</button>
-                        <div class="content">
-                            <p>We use advanced security measures to ensure your data is protected. Your personal
-                                information is stored securely and used only for the purpose of assisting with your
-                                university applications.</p>
-                        </div>
-
-                        <button class="collapsible">3. Can UniApplyBot help me with international applications?</button>
-                        <div class="content">
-                            <p>Currently, UniApplyBot focuses on South African universities, but we are working on
-                                expanding our services to include international institutions in the near future.</p>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <h5>
-                            Have questions or need assistance? Reach out to us at
-                            <a id="contactLink" href="javascript:void(0);">uniapplybott@gmail.com</a>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-
-            <li>
-                <a href="#services">Services</a>
-            </li>
-
-            <li>
-                <a href="about.html">About Us</a>
-            </li>
-
-            <li>
-                <a href="#contact">Contact Us</a>
-            </li>
-
-            <li>
-                <a href="#testimonials">Testimonials</a>
-            </li>
-        </ul>
-        <p class="copyright">
-            @ UniApplyBot | All Rights Reserved!
-        </p>
-    </footer>
 </body>
-
 </html>

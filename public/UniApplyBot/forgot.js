@@ -24,7 +24,7 @@ try {
         sendPasswordResetEmail(auth, email)
         .then(() => {
             showMessage("Password reset email sent, check your emails.", "ForgotMessage");
-            window.location.href = "index.html"
+            window.location.href = "./index.html"
         })
         .catch ((error) => {
             const errorCode = error.code;

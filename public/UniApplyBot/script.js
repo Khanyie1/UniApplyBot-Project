@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-import { auth } from '../frontend/firebaseAPI.js';
+import { auth } from './firebaseAPI.js';
 import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
 
 try {
@@ -59,7 +59,7 @@ try {
   
     signOut(auth)
     .then(() => {
-      window.location.href = "../frontend/index.html"
+      window.location.href = "./index.html"
     })
     .catch((error) => {
       console.error("Error signing out", error)
@@ -75,7 +75,7 @@ try {
   logout2.addEventListener("click", () => {
     signOut(auth)
     .then(() => {
-      window.location.href = "../frontend/index.html"
+      window.location.href = "./index.html"
     })
     .catch((error) => {
       console.error("Error signing out", error)
@@ -123,7 +123,7 @@ for (i = 0; i < coll.length; i++) {
 }
 
 // Import necessary Firebase modules
-import { db } from '../frontend/firebaseAPI.js';
+import { db } from './firebaseAPI.js';
 import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
 
 // Reference to the testimonials collection in Firestore

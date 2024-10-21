@@ -19,7 +19,7 @@
   "author": "",
   "contributors": [],
   "scripts": {
-    "start": "live-server public/frontend",
+    "start": "live-server public/UniApplyBot",
     "dev": "",
     "test": ""
   },

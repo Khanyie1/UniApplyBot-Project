@@ -85,7 +85,7 @@ loginBtn.addEventListener('click', async (e) => {
         .then((userCredential) => {
             const user = userCredential.user;
             localStorage['loggedInUserId'] = user.uid;
-            window.location.href = "../UniApplyBot/index.html"
+            window.location.href = "./main.html"
         })
         .catch((error) => {
             const errorCode = error.code;
