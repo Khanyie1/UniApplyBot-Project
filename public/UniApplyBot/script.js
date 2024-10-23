@@ -124,7 +124,7 @@ for (i = 0; i < coll.length; i++) {
 
 // Import necessary Firebase modules
 import { db } from './firebaseAPI.js';
-import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+import { collection, addDoc, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
 
 // Reference to the testimonials collection in Firestore
 const testimonialsRef = collection(db, "testimonials");
@@ -132,7 +132,8 @@ const testimonialsRef = collection(db, "testimonials");
 // Fetch and display testimonials
 async function fetchTestimonials() {
     try {
-        const querySnapshot = await getDocs(testimonialsRef);
+        const q = query(testimonialsRef, orderBy("createdDate", "desc"), limit(3));
+        const querySnapshot = await getDocs(q);
         const testimonialsWrapper = document.getElementById('testimonials-wrapper');
         testimonialsWrapper.innerHTML = querySnapshot.docs.map(doc => {
             const t = doc.data();
@@ -188,6 +189,7 @@ document.getElementById('testimonial-form').addEventListener('submit', async (ev
   event.preventDefault();
   const name = document.getElementById('name').value;
   const comment = document.getElementById('comment').value;
+  const createdDate = new Date();
   const rating = ratingValue;
 
   if (!rating) {
@@ -209,7 +211,7 @@ document.getElementById('testimonial-form').addEventListener('submit', async (ev
 
     // Add a new testimonial to Firestore
     try {
-        await addDoc(testimonialsRef, { name, comment, rating });
+        await addDoc(testimonialsRef, { name, comment, rating, createdDate });
         fetchTestimonials(); // Update testimonials after submission
         // Clear the form
         document.getElementById('testimonial-form').reset();

@@ -54,22 +54,6 @@ loginBtn.addEventListener('click', async (e) => {
         return;
     }
 
-    // const emailExists = await checkEmailExists(email);
-    // if(!emailExists) {
-    //     showMessage("Email does not exist in our system!", "SignInMessage")
-    // } else {
-    //     showMessage("Email does exist already!", "SignInMessage");
-    // }
-
-    // const emailValue = email;
-    // checkEmailExists(emailValue).then(result => {
-    // if (result.exists) {
-    //     console.log(result.message);
-    // } else {
-    //     console.log(result.message);
-    // }
-    // });
-
     if(password === ""){
         showMessage("Password is required.", "SignInMessage");
         return;
