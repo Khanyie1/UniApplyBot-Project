@@ -122,6 +122,58 @@ body {
     transform: translateX(0);
 }
 
+.termswrapper-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: transparent; 
+    backdrop-filter: blur(8px); 
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    color: #fff; 
+    transform: translate(-50%, -50%);
+    margin-top: 3.1%;
+    overflow: hidden;
+    transition: height .2s ease;
+}
+
+.terms-content {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.terms-content h3 {
+    font-weight: bold;
+    font-size: 1.7em;
+    margin-top: 20px;
+    color: #00b2b2;
+}
+
+.terms-content p {
+    margin-bottom: 15px;
+}
+
+.login-register {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .termswrapper-page {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
 .form-box h2{
     font-size: 3em;
     color: white;
@@ -362,7 +414,18 @@ body {
     margin-left:300px;
     margin-right: 300px;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.8rem;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+}
+
+.reviewmessage {
+    background-color: hsl(327,90%,28%);
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.8rem;
     opacity: 0;
     animation: fadeOut 7s forwards;
 }
@@ -1924,7 +1987,7 @@ section#Financial {
 /* Hover effect */
 .financial-stream:hover h4, 
 .financial-stream:hover p {
-    color: var(--main-color);
+    color: black;
 }
 
 /* Media queries for smaller screens */
@@ -2040,6 +2103,20 @@ section#Financial {
         text-align: center;
         position: relative;
     }
+
+    .reviewmessage {
+        background-color: hsl(327, 90%, 28%);
+        color: white;
+        padding: 10px 20px;
+        margin: 20px auto;
+        width: 80%;
+        border-radius: 5px;
+        font-size: 1rem;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+        text-align: center;
+        position: relative; 
+    }
 }
 
 /* Last media added */
@@ -2057,8 +2134,6 @@ section#Financial {
         background-color: hsl(327,90%,28%);
         color: white;
         padding: 10px 20px;
-        margin-left:100px;
-        margin-right: 100px;
         border-radius: 5px;
         font-size: 12px;
         opacity: 0;
@@ -2066,4 +2141,17 @@ section#Financial {
         display:none; 
         text-align: center;
     }
+
+    .reviewmessage {
+        background-color: hsl(327,90%,28%);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 12px;
+        opacity: 0;
+        animation: fadeOut 7s forwards;
+        display:none; 
+        text-align: center;
+    }    
+
 }
