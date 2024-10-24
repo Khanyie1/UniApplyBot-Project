@@ -966,7 +966,7 @@ p {
     }
     81%,
     100% {
-        content: "easy-to-understand guidance.";
+        content: "simple guidance.";
     }
 }
 
@@ -1175,7 +1175,6 @@ p {
 
 .testimonials-item {
     min-height: 400px;
-    max-width: 450px;
     background: rgba(0, 0, 0, 0.7);
     border: 3px solid rgba(238, 238, 238, 0.2);
     border-radius: 2rem;
@@ -1213,7 +1212,7 @@ p {
     border-radius: 3rem; 
     transition: 0.4s ease-in-out; 
     padding: 2em; 
-    max-width: 600px; 
+    max-width: 500px; 
     margin: 0 auto; 
     margin-top: 8em;
 }
@@ -1591,6 +1590,15 @@ p {
         left: 0;
     }
 
+    .navbar a {
+        font-size: 1.7rem;
+        color: var(--text-color);
+        margin-left: 1rem;
+        font-weight: 500;
+        transition: 0.3s ease;
+        border-bottom: 3px solid transparent;
+    }
+
     .services {
         padding-bottom: 3rem;
     }
@@ -1654,7 +1662,13 @@ p {
     }
 
     .service-box {
+        background-color: var(--main-color);
+        height: 311px;
+        border-radius: 3rem;
+        border: 5px solid transparent;
+        cursor: pointer;
         transition: 0.4s ease-in-out;
+        padding: 3em 3em;
     }
     
     .service-box:hover {
@@ -1738,7 +1752,10 @@ p {
     }
 
     .services-container {
-        grid-template-columns: repeat(1, 1fr);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 2.5rem;
     }
 
     .testimonials-item:hover {
@@ -1792,7 +1809,7 @@ p {
     .service-box {
         transition: 0.4s ease-in-out;
         background-color: var(--main-color);
-        height: 200px;
+        height: 250px;
         border-radius: 3rem;
         border: 5px solid transparent;
         cursor: pointer;
@@ -1828,6 +1845,24 @@ p {
     .contact form {
         display: block;
     }
+
+    .testimonials-item {
+        min-height: 400px;
+        background: rgba(0, 0, 0, 0.7);
+        border: 3px solid rgba(238, 238, 238, 0.2);
+        border-radius: 2rem;
+        margin: 0 2rem;
+        padding: 30px 60px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+        color: white;
+        transition: 0.4s ease-in-out;
+    }
 }
 
 @media only screen and (min-width: 344px) and (max-width: 894px) {
@@ -1841,17 +1876,6 @@ p {
 
     .mobile-menu.show {
         display: flex; 
-    }
-  
-    .service-box {
-        transition: 0.4s ease-in-out;
-        background-color: var(--main-color);
-        height: 200px;
-        border-radius: 3rem;
-        border: 5px solid transparent;
-        cursor: pointer;
-        transition: 0.4s ease-in-out;
-        padding: 1em 1em;
     }
 
     .service-box h4 {
@@ -2005,10 +2029,40 @@ section#Financial {
     .financial-stream p {
         font-size: 1.4rem; /* Keep p size slightly smaller */
     }
+
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-box {
+        transition: 0.4s ease-in-out;
+        background-color: var(--main-color);
+        height: 170px;
+        border-radius: 3rem;
+        border: 5px solid transparent;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        padding: 1em 1em;
+    }
 }
 
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
+
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-box {
+        background-color: var(--main-color);
+        height: 227px;
+        border-radius: 3rem;
+        border: 5px solid transparent;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        padding: 1em 1em;
+    }
+
     .financial-stream {
         padding: 1rem; /* Reduce padding for small devices */
     }
@@ -2152,6 +2206,23 @@ section#Financial {
         animation: fadeOut 7s forwards;
         display:none; 
         text-align: center;
-    }    
+    }
+      
+}
 
+@media (max-width: 350px) {
+
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-box {
+        background-color: var(--main-color);
+        height: 250px;
+        border-radius: 3rem;
+        border: 5px solid transparent;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        padding: 1em 1em;
+    }
 }
