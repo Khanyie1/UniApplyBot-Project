@@ -324,7 +324,6 @@ body {
 
 .btn{
     width: 100%;
-    margin-top: 10px;
     height: 45px;
     background: #00b2b2;
     border: none;
@@ -1106,7 +1105,7 @@ p {
 
 .service-box {
     background-color: var(--main-color);
-    height: 200px;
+    height: 240px;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
@@ -1552,6 +1551,21 @@ p {
         border: 5px solid var(--main-color);
         transform: scale(1.05);
     }
+
+    .home {
+        flex-direction: column-reverse;
+    }
+
+    .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding-top: 100px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 5px;
+    }
 }
 
 @media (max-width:991px) and (min-width:896px) {
@@ -1681,6 +1695,21 @@ p {
     .wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .home {
+        flex-direction: column-reverse;
+    }
+
+    .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding-top: 100px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 5px;
+    }
 }
 
 @media(max-width:895px) {
@@ -1739,7 +1768,7 @@ p {
     }
 
     .home-content p {
-        max-width: 500px;
+        /* max-width: 500px; */
         margin: 0 auto;
     }
 
