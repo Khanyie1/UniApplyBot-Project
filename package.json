@@ -18,6 +18,7 @@
   "keywords": [],
   "author": "",
   "contributors": [],
+<<<<<<< HEAD
  "scripts": {
   "start": "live-server public/UniApplyBot",
   "dev": "nodemon src/express.js",
@@ -36,9 +37,18 @@
     "source-map-url": "^0.4.1",
     "urix": "^0.1.0",
     "uuid": "^10.0.0"
+=======
+  "scripts": {
+    "start": "live-server public/UniApplyBot",
+    "dev": "",
+    "test": ""
   },
-  "devDependencies": {
-    "live-server": "^1.2.2"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "live-server": "^1.2.0",
+    "nodemon": "^3.1.7"
+>>>>>>> 89a2e1558514b91614fedd84b229b5fa4d65a3ea
   },
   "description": ""
 }

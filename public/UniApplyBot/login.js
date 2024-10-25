@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 import { auth } from './firebaseAPI.js';
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
-import { validateEmail } from '../frontend/validation/validation.js';
+import { validateEmail } from './validation/validation.js';
 
 function showMessage(message, divId) {
     var messageDiv = document.getElementById(divId);
@@ -54,22 +54,6 @@ loginBtn.addEventListener('click', async (e) => {
         return;
     }
 
-    // const emailExists = await checkEmailExists(email);
-    // if(!emailExists) {
-    //     showMessage("Email does not exist in our system!", "SignInMessage")
-    // } else {
-    //     showMessage("Email does exist already!", "SignInMessage");
-    // }
-
-    // const emailValue = email;
-    // checkEmailExists(emailValue).then(result => {
-    // if (result.exists) {
-    //     console.log(result.message);
-    // } else {
-    //     console.log(result.message);
-    // }
-    // });
-
     if(password === ""){
         showMessage("Password is required.", "SignInMessage");
         return;
@@ -85,7 +69,7 @@ loginBtn.addEventListener('click', async (e) => {
         .then((userCredential) => {
             const user = userCredential.user;
             localStorage['loggedInUserId'] = user.uid;
-            window.location.href = "../UniApplyBot/index.html"
+            window.location.href = "./main.html"
         })
         .catch((error) => {
             const errorCode = error.code;
