@@ -36,6 +36,7 @@
     <nav class="mobile-menu">
         <a href="#home" class="active">Home<i class="material-icons">home</i></a>
         <!-- <a href="#education">Education<i class="material-icons">school</i></a> -->
+        <a href="#Financial">Financial-aid<i class="material-icons">paid</i></a>
         <a href="#services">Services<i class="material-icons">volunteer_activism</i></a>
         <a href="#testimonials">Testimonials<i class="material-icons">reviews</i></a>
         <a href="#contact">Contact Us<i class="material-icons">contacts</i></a>
@@ -177,7 +178,8 @@
             <div class="financial-stream">
                 <div class="financial-info"></div>
                 <h4>NSFAS</h4>
-                <p>National Student Financial Aid Scheme For South African students seeking financial aid.</p>
+                <p>The National Student Financial Aid Scheme provides financial assistance for South African students in
+                    need.</p>
                 <a href="https://www.nsfas.org.za/">
                     <h3>Learn more</h3>
                 </a>
@@ -188,7 +190,7 @@
                 <h4>(Wits) Financial Aid</h4>
                 <p>The University of the Witwatersrand offers financial assistance to students who meet the university’s
                     financial aid criteria.</p>
-                <a href="https://www.wits.ac.za/study-at-wits/fees-and-funding/financial-aid/">
+                <a href="https://www.wits.ac.za/study-at-wits/financial-aid-and-scholarships-administration/">
                     <h3>Learn More</h3>
                 </a>
             </div>
@@ -198,7 +200,7 @@
                 <h4>(UCT) Financial Aid</h4>
                 <p>The University of Cape Town offers multiple financial aid options to help students manage their
                     education costs.</p>
-                <a href="https://www.uct.ac.za/apply/funding/undergraduate/financial-aid">
+                <a href="https://uct.ac.za/dsa/student-funding-administration-financial-assistance/financial-aid">
                     <h3>Learn More</h3>
                 </a>
             </div>
@@ -289,7 +291,7 @@
                 <div class="form-group">
                     <h2>Your Rating</h2>
 
-                    <div id="alert-message" class="reviewmessage" style="display:none; text-align: center;"></div>
+                    <div id="alert-message" class="testimonymessage" style="display:none; text-align: center;"></div>
 
                     <div id="rating" class="star-rating">
                         <span class="fa fa-star" data-value="1"></span>
@@ -322,27 +324,31 @@
     <!-- this conclude it -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Us</span></h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
+
+        <div id="alert-message2" class="contactmessage" style="display:none; text-align: center;"></div>
+
+        <form id="contactForm" method="POST" novalidate>
             <input type="hidden" name="access_key" value="96dd6c5d-cfe2-4abc-a0d9-58c9e2f3a55f">
             <div class="input-group">
                 <div class="input-box-contact">
-                    <input type="text" name="username" id="username" placeholder="Full Name" required>
-                    <input type="email" name="UserEmail" id="UserEmail" placeholder="Email" required>
+                    <input type="text" name="Name" id="username" placeholder="Full Name" required>
+                    <input type="email" name="Email" id="UserEmail" placeholder="Email" required>
                 </div>
 
                 <div class="input-box-contact">
-                    <input type="number" name="UseNumber" id="UseNumber" placeholder="Phone Number" required>
-                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    <input type="number" name="Mobile Number" id="UseNumber" placeholder="Phone Number" required>
+                    <input type="text" name="Subject" id="subject" placeholder="Subject" required>
                 </div>
             </div>
 
             <div class="input-group-2">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"
+                <textarea name="Message" id="message" cols="30" rows="10" placeholder="Your Message"
                     required></textarea>
                 <button type="submit" class="sendmessage-btn">Send Message</button>
             </div>
         </form>
     </section>
+
 
     <footer class="footer">
         <div class="social">
