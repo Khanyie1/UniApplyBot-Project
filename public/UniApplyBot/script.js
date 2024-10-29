@@ -161,7 +161,7 @@ document.querySelectorAll('.fa-star').forEach(star => {
         ratingValue = this.getAttribute('data-value');
         document.getElementById('rating-value').value = ratingValue;
 
-        clearStars();
+        clearStars(ratingValue);
         highlightStars(ratingValue);
     });
 });
@@ -170,17 +170,21 @@ document.querySelectorAll('.fa-star').forEach(star => {
 function highlightStars(value) {
     document.querySelectorAll('.fa-star').forEach(star => {
         if (parseInt(star.getAttribute('data-value')) <= value) {
-            star.classList.add('selected');
+            // star.classList.add('selected');
             star.style.color = 'gold';
         }
     });
 }
 
 // Function to clear all star highlights
-function clearStars() {
+function clearStars(value) {
     document.querySelectorAll('.fa-star').forEach(star => {
-        star.classList.remove('selected');
+      if (parseInt(star.getAttribute('data-value')) <= value) {
+        // star.classList.add('selected');
         star.style.color = '';
+    }
+        // star.classList.remove('selected');
+        // star.style.color = '';
     });
 }
 
@@ -215,7 +219,7 @@ document.getElementById('testimonial-form').addEventListener('submit', async (ev
         fetchTestimonials(); // Update testimonials after submission
         // Clear the form
         document.getElementById('testimonial-form').reset();
-        clearStars(); // Clear stars after submission
+        clearStars(ratingValue); // Clear stars after submission
     } catch (error) {
         console.error("Error adding testimonial: ", error);
     }
@@ -247,6 +251,47 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.getElementById('contactForm');
+  const alertMessage = document.getElementById('alert-message2');
+
+  contactForm.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      if (!contactForm.checkValidity()) {
+          contactForm.reportValidity(); 
+          return; 
+      }
+
+      fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(contactForm)
+      })
+      .then(response => {
+          if (response.ok) {
+              contactForm.reset();
+
+              alertMessage.textContent = 'Message sent successfully!';
+              alertMessage.style.display = 'block';
+          } else {
+          
+              alertMessage.textContent = 'There was an issue sending your message. Please try again.';
+              alertMessage.style.display = 'block';
+          }
+      })
+      .catch(error => {
+          alertMessage.textContent = 'An error occurred. Please check your connection and try again.';
+          alertMessage.style.display = 'block';
+      });
+
+      setTimeout(() => {
+          alertMessage.style.display = 'none';
+      }, 5000);
+  });
+});
+
+
 
 
 

@@ -418,7 +418,19 @@ body {
     animation: fadeOut 7s forwards;
 }
 
-.reviewmessage {
+.contactmessage {
+    background-color: hsl(327, 90%, 28%);
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    display: none; /* Start hidden */
+    text-align: center;
+}
+
+
+.testimonymessage {
     background-color: hsl(327,90%,28%);
     color: white;
     padding: 10px 20px;
@@ -495,7 +507,7 @@ span#passwordTooltip {
     border: 5px solid var(--main-color);
     transform: scale(1.05);
 }
-.financial-stream{
+.financial-stream {
     background-color: var(--main-color);
     height: 200px;
     border-radius: 3rem;
@@ -504,7 +516,7 @@ span#passwordTooltip {
     transition: 0.4s ease-in-out;
     padding: 3em 3em;
 }
-.financial-stream p{
+.financial-stream p {
     font-size: 1.6rem;
     font-weight: 400;
     max-height: 100px;
@@ -720,7 +732,7 @@ section {
     align-items: center;
 }
 
-.login-header{
+.login-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -1470,6 +1482,18 @@ p {
         margin: 0 2rem;
     }
 
+    .message {
+        background-color: hsl(327, 90%, 28%);
+        color: white;
+        padding: 10px 20px;
+        margin-left: 200px;
+        margin-right: 200px;
+        border-radius: 5px;
+        font-size: 1.8rem;
+        opacity: 0;
+        animation: fadeOut 7s forwards;
+    }
+
     .service-box p {
         margin-top: 2rem;
         padding-bottom: 17rem;
@@ -1578,6 +1602,18 @@ p {
     .contact,
     .footer {
         width: 100%;
+    }
+
+    .message {
+        background-color: hsl(327, 90%, 28%);
+        color: white;
+        padding: 10px 20px;
+        margin-left: 150px;
+        margin-right: 150px;
+        border-radius: 5px;
+        font-size: 1.8rem;
+        opacity: 0;
+        animation: fadeOut 7s forwards;
     }
 
     .home-content h1 {
@@ -1719,6 +1755,18 @@ p {
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 0px;
+    }
+
+    .message {
+        background-color: hsl(327, 90%, 28%);
+        color: white;
+        padding: 10px 20px;
+        margin-left: 150px;
+        margin-right: 150px;
+        border-radius: 5px;
+        font-size: 1.8rem;
+        opacity: 0;
+        animation: fadeOut 7s forwards;
     }
 
     .financial-stream {
@@ -1999,7 +2047,7 @@ section#Financial {
 /* Container responsive layout */
 .financial-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid to fit screen sizes */
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid to fit screen sizes */
     align-items: center;
     gap: 2.5rem;
 }
@@ -2064,6 +2112,10 @@ section#Financial {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .financial-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .service-box {
         transition: 0.4s ease-in-out;
         background-color: var(--main-color);
@@ -2074,12 +2126,28 @@ section#Financial {
         transition: 0.4s ease-in-out;
         padding: 1em 1em;
     }
+
+    .message {
+        background-color: hsl(327, 90%, 28%);
+        color: white;
+        padding: 10px 20px;
+        margin-left: 150px;
+        margin-right: 150px;
+        border-radius: 5px;
+        font-size: 1.8rem;
+        opacity: 0;
+        animation: fadeOut 7s forwards;
+    }
 }
 
 /* Small screens (up to 480px) */
 @media (max-width: 480px) {
 
     .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .financial-container {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -2188,7 +2256,21 @@ section#Financial {
         position: relative;
     }
 
-    .reviewmessage {
+    .contactmessage {
+        background-color: hsl(327, 90%, 28%);
+        color: white;
+        padding: 10px 20px;
+        margin: 20px auto;
+        width: 80%;
+        border-radius: 5px;
+        font-size: 1rem;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+        text-align: center;
+        position: relative; 
+    }
+
+    .testimonymessage {
         background-color: hsl(327, 90%, 28%);
         color: white;
         padding: 10px 20px;
@@ -2226,7 +2308,7 @@ section#Financial {
         text-align: center;
     }
 
-    .reviewmessage {
+    .contactmessage {
         background-color: hsl(327,90%,28%);
         color: white;
         padding: 10px 20px;
@@ -2237,12 +2319,27 @@ section#Financial {
         display:none; 
         text-align: center;
     }
+
+    .testimonymessage {
+        background-color: hsl(327,90%,28%);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 12px;
+        opacity: 0;
+        animation: fadeOut 7s forwards;
+        display:none; 
+        text-align: center;
       
 }
 
 @media (max-width: 350px) {
 
     .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .financial-container {
         grid-template-columns: repeat(1, 1fr);
     }
 
